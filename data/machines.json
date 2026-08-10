@@ -306,7 +306,10 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [],
+      "images": [
+          "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/OIP (1).webp",
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/OIP (2).webp"
+      ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "In racks, unknown S/N Brand new"
     },
@@ -360,7 +363,7 @@
       "price": "NA",
       "sharepointUrl": "",
       "images": [
-                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum2.webp",
+                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum-2.webp",
          "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum.webp"
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
@@ -376,7 +379,7 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum2.webp",
+      "images": [                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum-2.webp",
          "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum.webp"],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Unknown S/N, in racks.Brand new"
@@ -391,7 +394,7 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum2.webp",
+      "images": [                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum-2.webp",
          "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum.webp"],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Unknown S/N, in racks.Brand new"
