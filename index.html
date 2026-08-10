@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Second-Hand Equipment Directory</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+:root {
+  --teal: #01818E;
+  --teal-light: #14C6D4;
+  --teal-dark: #015159;
+  --teal-glow: rgba(1,129,142,0.5);
+  --teal-light-glow: rgba(20,198,212,0.5);
+  --ink: #F5F6F8;
+  --ink-dim: #A7AFBA;
+  --ink-faint: #6E7681;
+  --bg: #07080A;
+  --bg-elev: #101318;
+  --glass: rgba(255,255,255,0.055);
+  --glass-strong: rgba(255,255,255,0.10);
+  --glass-border: rgba(255,255,255,0.14);
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.asc-display { font-family: 'Space Grotesk', sans-serif; }
+.asc-mono { font-family: 'JetBrains Mono', monospace; }
+
+/* ---- Ambient bloom background ---- */
+.asc-glow-field { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.asc-blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.45; mix-blend-mode: screen; }
+.asc-blob-a { width: 620px; height: 620px; top: -220px; left: -160px; background: radial-gradient(circle, var(--teal-light) 0%, transparent 70%); animation: driftA 26s ease-in-out infinite alternate; }
+.asc-blob-b { width: 680px; height: 680px; bottom: -260px; right: -200px; background: radial-gradient(circle, var(--teal) 0%, transparent 70%); animation: driftB 32s ease-in-out infinite alternate; }
+.asc-blob-c { width: 480px; height: 480px; top: 40%; left: 50%; background: radial-gradient(circle, rgba(1,129,142,0.35) 0%, transparent 70%); opacity: 0.25; animation: driftC 40s ease-in-out infinite alternate; }
+@keyframes driftA { from { transform: translate(0,0) scale(1); } to { transform: translate(60px, 40px) scale(1.08); } }
+@keyframes driftB { from { transform: translate(0,0) scale(1); } to { transform: translate(-50px, -30px) scale(1.1); } }
+@keyframes driftC { from { transform: translate(-50%,-50%) rotate(0deg); } to { transform: translate(-50%,-50%) rotate(40deg) scale(1.15); } }
+
+#asc-root { position: relative; z-index: 1; width: 100%; padding: 28px 32px 70px; max-width: 1440px; margin: 0 auto; }
+
+/* ---- Liquid glass base ---- */
+.glass {
+  background: linear-gradient(155deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02) 60%);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 34px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.14);
+  position: relative;
+}
+.glass::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(120deg, rgba(255,255,255,0.16) 0%, transparent 32%);
+  opacity: 0.7;
+}
+
+/* ---- Header ---- */
+.asc-header { padding: 22px 26px; margin-bottom: 20px; }
+.asc-header-top { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+.asc-brand { display: flex; align-items: center; gap: 14px; }
+.asc-mark {
+  width: 50px; height: 50px; border-radius: 14px; flex-shrink: 0;
+  background: linear-gradient(150deg, var(--teal-light), var(--teal-dark) 120%);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.18) inset, 0 8px 24px var(--teal-glow);
+}
+.asc-mark svg { width: 26px; height: 26px; }
+.asc-wordmark { display: flex; flex-direction: column; gap: 2px; }
+.asc-wordmark-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.03em; text-transform: uppercase; }
+.asc-wordmark-title span { color: var(--teal-light); }
+.asc-wordmark-sub { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+
+.asc-hero { margin-top: 20px; }
+.asc-hero-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(26px, 4vw, 40px); margin: 0 0 8px; letter-spacing: -0.01em; }
+.asc-hero-title .accent {
+  background: linear-gradient(100deg, var(--teal-light), var(--teal));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: 0 0 40px var(--teal-glow);
+}
+.asc-hero-sub { color: var(--ink-dim); font-size: 15px; max-width: 640px; line-height: 1.5; margin: 0; }
+.asc-tagline { color: var(--ink-faint); font-size: 12.5px; margin-top: 10px; font-style: italic; }
+
+/* ---- Controls ---- */
+.asc-controls { display: flex; gap: 10px; align-items: center; margin-top: 24px; flex-wrap: wrap; }
+.asc-search { position: relative; flex: 1 1 240px; min-width: 200px; }
+.asc-search input {
+  width: 100%; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; padding: 12px 16px 12px 40px;
+  border-radius: var(--radius-sm); border: 1px solid var(--glass-border); background: rgba(255,255,255,0.05);
+  color: var(--ink); outline: none; transition: border-color .18s, box-shadow .18s;
+}
+.asc-search input::placeholder { color: var(--ink-faint); }
+.asc-search input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-glow); }
+.asc-search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); opacity: 0.5; pointer-events: none; }
+
+.asc-select {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13.5px; font-weight: 600; padding: 11px 14px;
+  border-radius: var(--radius-sm); border: 1px solid var(--glass-border); background: rgba(255,255,255,0.05);
+  color: var(--ink); outline: none; cursor: pointer; transition: border-color .18s;
+}
+.asc-select:focus { border-color: var(--teal); }
+
+.asc-chips { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.asc-chip {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12.5px; font-weight: 700; padding: 8px 16px; border-radius: 20px;
+  border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--ink-dim);
+  cursor: pointer; transition: all .18s; letter-spacing: 0.02em;
+}
+.asc-chip:hover { border-color: var(--ink-dim); color: var(--ink); }
+.asc-chip.active { background: linear-gradient(120deg, var(--teal), var(--teal-dark)); border-color: var(--teal); color: #fff; box-shadow: 0 4px 18px var(--teal-glow); }
+
+/* ---- Stats ---- */
+.asc-stats { display: flex; gap: 12px; margin: 22px 0; flex-wrap: wrap; }
+.asc-stat { padding: 12px 20px; display: flex; align-items: baseline; gap: 9px; border-radius: var(--radius-md); }
+.asc-stat-num { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; }
+.asc-stat-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.asc-stat-total .asc-stat-num { color: var(--teal-light); text-shadow: 0 0 18px var(--teal-light-glow); }
+.asc-stat-sweeper .asc-stat-num { color: var(--ink); }
+.asc-stat-scrubber .asc-stat-num { color: var(--teal); text-shadow: 0 0 18px var(--teal-glow); }
+
+/* ---- Grid ---- */
+.asc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; }
+
+.asc-card { border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: transform .25s ease, box-shadow .25s ease; }
+.asc-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.14), 0 0 32px var(--teal-glow); }
+
+.asc-card-img-wrap { aspect-ratio: 4/3; background: #14171c; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.asc-card-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.asc-card:hover .asc-card-img-wrap img { transform: scale(1.1); }
+.asc-card-img-wrap::after {
+  content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.75) 100%); pointer-events: none;
+}
+.asc-card-noimg { color: var(--ink-faint); display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 12px; }
+
+.asc-badge {
+  position: absolute; top: 10px; left: 10px; z-index: 3; font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; padding: 5px 11px; border-radius: 20px; backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.22); color: #fff;
+}
+.asc-badge.sweeper { background: rgba(20,198,212,0.45); }
+.asc-badge.scrubber { background: rgba(1,129,142,0.65); }
+
+.asc-price-tag {
+  position: absolute; top: 10px; right: 10px; z-index: 3; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px;
+  padding: 6px 12px; border-radius: var(--radius-sm); background: rgba(10,11,13,0.75); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18); color: var(--teal-light); text-shadow: 0 0 12px var(--teal-light-glow);
+}
+.asc-photo-count {
+  position: absolute; bottom: 10px; left: 10px; z-index: 3; background: rgba(10,11,13,0.7); backdrop-filter: blur(6px);
+  color: #fff; font-size: 10.5px; font-weight: 600; padding: 5px 10px; border-radius: var(--radius-sm);
+  display: flex; align-items: center; gap: 5px; border: 1px solid rgba(255,255,255,0.14);
+}
+
+.asc-card-body { padding: 16px 18px 18px; background: rgba(255,255,255,0.03); }
+.asc-card-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; margin: 0 0 6px; }
+.asc-card-specs { display: flex; flex-wrap: wrap; gap: 6px 10px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--ink-dim); }
+.asc-card-specs span { display: flex; align-items: center; gap: 4px; }
+.asc-card-specs span:not(:last-child)::after { content: '·'; margin-left: 8px; color: var(--ink-faint); }
+
+/* ---- Empty / loading / error ---- */
+.asc-state-msg { grid-column: 1/-1; text-align: center; padding: 70px 20px; color: var(--ink-dim); }
+.asc-state-msg .asc-mono { color: var(--ink-faint); font-size: 12px; margin-top: 10px; display: block; }
+.asc-retry-btn {
+  margin-top: 16px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 13px; padding: 10px 20px;
+  border-radius: var(--radius-sm); border: 1px solid var(--glass-border); background: rgba(255,255,255,0.06); color: var(--ink);
+  cursor: pointer; transition: border-color .18s;
+}
+.asc-retry-btn:hover { border-color: var(--teal); }
+
+/* ---- Lightbox ---- */
+.asc-lightbox {
+  position: fixed; inset: 0; z-index: 50; display: none; align-items: center; justify-content: center;
+  background: rgba(4,5,6,0.82); backdrop-filter: blur(18px); padding: 20px;
+}
+.asc-lightbox.open { display: flex; }
+.asc-lightbox-panel {
+  width: 100%; max-width: 1240px; max-height: 90vh; border-radius: var(--radius-lg); overflow: hidden;
+  display: grid; grid-template-columns: 1.5fr 1fr; position: relative;
+}
+
+/* left: photos */
+.asc-lightbox-media { display: flex; flex-direction: column; min-height: 0; background: #0a0b0d; }
+.asc-lightbox-main { position: relative; flex: 1; min-height: 0; background: #0a0b0d; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.asc-lightbox-main img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.asc-lightbox-thumbs { flex-shrink: 0; display: flex; gap: 8px; padding: 14px 16px; overflow-x: auto; background: rgba(255,255,255,0.03); border-top: 1px solid var(--glass-border); }
+.asc-lightbox-thumb { width: 60px; height: 60px; border-radius: 8px; object-fit: cover; cursor: pointer; opacity: 0.5; border: 2px solid transparent; flex-shrink: 0; transition: opacity .15s, border-color .15s; }
+.asc-lightbox-thumb.active { opacity: 1; border-color: var(--teal-light); }
+.asc-lightbox-thumb:hover { opacity: 0.85; }
+
+.asc-download-btn {
+  flex-shrink: 0; display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin: 0 16px 14px; padding: 11px 18px; border-radius: var(--radius-sm); border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.05); color: var(--ink); font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px; font-weight: 700; cursor: pointer; transition: border-color .18s, background .18s, color .18s;
+}
+.asc-download-btn:hover:not(:disabled) { border-color: var(--teal-light); color: var(--teal-light); background: rgba(20,198,212,0.08); }
+.asc-download-btn:disabled { opacity: 0.55; cursor: default; }
+.asc-download-btn.hidden { display: none; }
+
+.asc-close-btn {
+  position: absolute; top: 16px; right: 16px; z-index: 10; width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(10,11,13,0.7); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); color: #fff;
+  display: flex; align-items: center; justify-content: center; cursor: pointer; transition: box-shadow .18s, background .18s;
+}
+.asc-close-btn:hover { background: var(--teal-dark); box-shadow: 0 0 20px var(--teal-glow); }
+
+.asc-nav-btn {
+  position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%;
+  background: rgba(10,11,13,0.65); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); color: #fff;
+  display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; transition: box-shadow .18s, background .18s;
+}
+.asc-nav-btn:hover { background: var(--teal); box-shadow: 0 0 20px var(--teal-glow); }
+.asc-nav-btn.prev { left: 14px; }
+.asc-nav-btn.next { right: 14px; }
+
+/* right: details */
+.asc-lightbox-details { display: flex; flex-direction: column; min-height: 0; background: rgba(255,255,255,0.045); border-left: 1px solid var(--glass-border); }
+.asc-lightbox-details-scroll { flex: 1; min-height: 0; overflow-y: auto; padding: 40px 32px 24px; display: flex; flex-direction: column; gap: 26px; }
+.asc-lightbox-details-top { display: flex; flex-direction: column; gap: 12px; padding-right: 40px; }
+.asc-lightbox-category {
+  align-self: flex-start; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 5px 13px; border-radius: 20px; border: 1px solid var(--glass-border); color: var(--ink-dim);
+}
+.asc-lightbox-category.sweeper { background: rgba(20,198,212,0.16); color: var(--teal-light); border-color: rgba(20,198,212,0.35); }
+.asc-lightbox-category.scrubber { background: rgba(1,129,142,0.22); color: var(--teal); border-color: rgba(1,129,142,0.4); }
+.asc-lightbox-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px; margin: 0; line-height: 1.25; }
+
+.asc-lightbox-spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; }
+.asc-lightbox-spec-item { display: flex; flex-direction: column; gap: 6px; padding-bottom: 16px; border-bottom: 1px solid var(--glass-border); }
+.asc-lightbox-spec-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); }
+.asc-lightbox-spec-value { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; color: var(--ink); }
+
+.asc-lightbox-notes { display: none; flex-direction: column; gap: 8px; }
+.asc-lightbox-notes-text { margin: 0; font-size: 14px; line-height: 1.6; color: var(--ink-dim); white-space: pre-line; }
+
+.asc-lightbox-price-box {
+  flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 22px 32px; border-top: 1px solid var(--glass-border); background: rgba(255,255,255,0.03);
+}
+.asc-lightbox-price-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); }
+.asc-lightbox-price { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 28px; color: var(--teal-light); text-shadow: 0 0 16px var(--teal-light-glow); }
+
+/* ---- Footer ---- */
+.asc-footer { text-align: center; padding: 40px 10px 10px; color: var(--ink-faint); font-size: 12px; }
+.asc-footer strong { color: var(--ink-dim); }
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.14); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.24); }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .asc-lightbox-panel { grid-template-columns: 1fr; grid-template-rows: minmax(220px, 42vh) 1fr; max-height: 94vh; }
+  .asc-lightbox-details { border-left: none; border-top: 1px solid var(--glass-border); }
+  .asc-lightbox-details-scroll { padding: 26px 22px 16px; gap: 20px; }
+  .asc-lightbox-details-top { padding-right: 0; }
+  .asc-lightbox-title { font-size: 21px; }
+  .asc-lightbox-price-box { padding: 18px 22px; }
+  .asc-lightbox-price { font-size: 22px; }
+}
+
+@media (max-width: 720px) {
+  #asc-root { padding: 16px 14px 50px; }
+  .asc-header { padding: 18px 16px; }
+  .asc-wordmark-title { font-size: 15px; }
+  .asc-mark { width: 42px; height: 42px; border-radius: 12px; }
+  .asc-mark svg { width: 22px; height: 22px; }
+  .asc-hero-title { font-size: 24px; }
+  .asc-hero-sub { font-size: 13.5px; }
+  .asc-controls { margin-top: 18px; }
+  .asc-select { flex: 1 1 auto; }
+  .asc-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .asc-card-name { font-size: 15px; }
+  .asc-card-body { padding: 12px 14px 14px; }
+  .asc-nav-btn { width: 40px; height: 40px; }
+  .asc-lightbox-spec-grid { grid-template-columns: 1fr; gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="asc-glow-field" aria-hidden="true">
+  <div class="asc-blob asc-blob-a"></div>
+  <div class="asc-blob asc-blob-b"></div>
+  <div class="asc-blob asc-blob-c"></div>
+</div>
+
+<div id="asc-root">
+
+  <header class="asc-header glass">
+    <div class="asc-header-top">
+      <div class="asc-brand">
+        <div class="asc-mark">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 20L14 4M14 4L11 4M14 4L14 7" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 20H20" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="18" cy="9" r="2.3" stroke="#fff" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <div class="asc-wordmark">
+          <div class="asc-wordmark-title">Australian <span>Sweeper</span> Company.</div>
+          <div class="asc-wordmark-sub">Sweepers &amp; Scrubbers</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="asc-hero">
+      <h1 class="asc-hero-title">Second-Hand <span class="accent">Machine Directory</span></h1>
+      <p class="asc-hero-sub">Quality used sweepers and scrubbers, inspected and ready to work. Browse current stock below.</p>
+      <p class="asc-tagline asc-mono">"Equipment you can count on. Service that backs it up."</p>
+    </div>
+
+    <div class="asc-controls">
+      <div class="asc-search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#A7AFBA" stroke-width="2"/><path d="M21 21L16.65 16.65" stroke="#A7AFBA" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="asc-search-input" type="text" placeholder="Search by model, serial, location…">
+      </div>
+      <select id="asc-state-select" class="asc-select"><option value="All">All Locations</option></select>
+      <select id="asc-sort-select" class="asc-select">
+        <option value="newest">Newest First</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="hours-asc">Hours: Low to High</option>
+      </select>
+    </div>
+
+    <div class="asc-chips" id="asc-chips"></div>
+  </header>
+
+  <div class="asc-stats" id="asc-stats"></div>
+
+  <main class="asc-grid" id="asc-grid">
+    <div class="asc-state-msg">
+      <span class="asc-display" style="font-size:16px;">Loading equipment…</span>
+    </div>
+  </main>
+
+  <footer class="asc-footer">
+    <strong>Australian Sweeper Company.</strong> — Second-Hand Equipment Directory
+  </footer>
+</div>
+
+<div class="asc-lightbox" id="asc-lightbox">
+  <div class="asc-lightbox-panel glass">
+    <button class="asc-close-btn" id="asc-close-btn" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="asc-lightbox-media">
+      <div class="asc-lightbox-main">
+        <button class="asc-nav-btn prev" id="asc-prev-btn" aria-label="Previous photo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <img id="asc-lightbox-img" src="" alt="">
+        <button class="asc-nav-btn next" id="asc-next-btn" aria-label="Next photo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="asc-lightbox-thumbs" id="asc-lightbox-thumbs"></div>
+      <button class="asc-download-btn" id="asc-download-btn" type="button">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 3V15M12 15L7 10M12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 19H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span id="asc-download-btn-label">Download Photos</span>
+      </button>
+    </div>
+
+    <div class="asc-lightbox-details">
+      <div class="asc-lightbox-details-scroll">
+        <div class="asc-lightbox-details-top">
+          <span class="asc-lightbox-category" id="asc-lightbox-category"></span>
+          <h3 class="asc-lightbox-title" id="asc-lightbox-name"></h3>
+        </div>
+        <div class="asc-lightbox-spec-grid" id="asc-lightbox-specs"></div>
+        <div class="asc-lightbox-notes" id="asc-lightbox-notes">
+          <span class="asc-lightbox-spec-label">Notes</span>
+          <p class="asc-lightbox-notes-text" id="asc-lightbox-notes-text"></p>
+        </div>
+      </div>
+      <div class="asc-lightbox-price-box">
+        <span class="asc-lightbox-price-label">Price</span>
+        <span class="asc-lightbox-price" id="asc-lightbox-price"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script>
+(function () {
+  const DATA_URL = 'data/machines.json';
+  let MACHINES = [];
+  let state = { search: '', category: 'All', location: 'All', sort: 'newest' };
+  let lightbox = { machine: null, photoIndex: 0 };
+
+  const grid = document.getElementById('asc-grid');
+  const chipsEl = document.getElementById('asc-chips');
+  const statsEl = document.getElementById('asc-stats');
+  const searchInput = document.getElementById('asc-search-input');
+  const stateSelect = document.getElementById('asc-state-select');
+  const sortSelect = document.getElementById('asc-sort-select');
+
+  const CATS = ['Sweeper', 'Scrubber'];
+
+  function escapeHtml(str) {
+    return String(str ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function formatPrice(price) {
+    const n = Number(price);
+    if (!price || isNaN(n)) return 'POA';
+    return '$' + n.toLocaleString('en-AU');
+  }
+
+  function formatHours(hours) {
+    if (!hours) return null;
+    return Number(hours).toLocaleString('en-AU') + ' hrs';
+  }
+
+  async function loadData() {
+    try {
+      const res = await fetch(DATA_URL, { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const json = await res.json();
+      MACHINES = json.machines || [];
+      populateStateOptions();
+      renderChips();
+      renderAll();
+    } catch (err) {
+      grid.innerHTML = `<div class="asc-state-msg">
+        <div class="asc-display" style="font-size:16px;">Couldn't load the equipment database</div>
+        <span class="asc-mono">${escapeHtml(err.message)}</span>
+        <span class="asc-mono">If you opened this file directly (file://), browsers block local JSON requests.<br>Serve this folder instead, e.g.: <strong>python3 -m http.server</strong>, then open the printed localhost URL.</span>
+        <button class="asc-retry-btn" onclick="location.reload()">Retry</button>
+      </div>`;
+    }
+  }
+
+  function populateStateOptions() {
+    const states = [...new Set(MACHINES.map(m => m.state).filter(Boolean))].sort();
+    stateSelect.innerHTML = '<option value="All">All Locations</option>' +
+      states.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('');
+  }
+
+  function renderChips() {
+    const cats = ['All', ...CATS];
+    chipsEl.innerHTML = cats.map(c =>
+      `<button class="asc-chip ${state.category === c ? 'active' : ''}" data-cat="${c}">${c}${c !== 'All' ? 's' : ''}</button>`
+    ).join('');
+    chipsEl.querySelectorAll('.asc-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.category = btn.dataset.cat;
+        renderChips();
+        renderAll();
+      });
+    });
+  }
+
+  function getFiltered() {
+    let list = MACHINES.filter(m => {
+      if (state.category !== 'All' && m.category !== state.category) return false;
+      if (state.location !== 'All' && m.state !== state.location) return false;
+      if (state.search) {
+        const q = state.search.toLowerCase();
+        const hay = [m.name, m.serial, m.state, m.powerType].join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+    list.sort((a, b) => {
+      if (state.sort === 'price-asc') return (Number(a.price) || Infinity) - (Number(b.price) || Infinity);
+      if (state.sort === 'price-desc') return (Number(b.price) || -Infinity) - (Number(a.price) || -Infinity);
+      if (state.sort === 'hours-asc') return (Number(a.hours) || Infinity) - (Number(b.hours) || Infinity);
+      return new Date(b.dateAdded || 0) - new Date(a.dateAdded || 0);
+    });
+    return list;
+  }
+
+  function renderStats() {
+    const total = MACHINES.length;
+    const sweepers = MACHINES.filter(m => m.category === 'Sweeper').length;
+    const scrubbers = MACHINES.filter(m => m.category === 'Scrubber').length;
+    statsEl.innerHTML = `
+      <div class="asc-stat glass asc-stat-total"><span class="asc-stat-num asc-mono">${total}</span><span class="asc-stat-label">Total Stock</span></div>
+      <div class="asc-stat glass asc-stat-sweeper"><span class="asc-stat-num asc-mono">${sweepers}</span><span class="asc-stat-label">Sweepers</span></div>
+      <div class="asc-stat glass asc-stat-scrubber"><span class="asc-stat-num asc-mono">${scrubbers}</span><span class="asc-stat-label">Scrubbers</span></div>
+    `;
+  }
+
+  function cardTemplate(m, idx) {
+    const img = (m.images && m.images[0]) || null;
+    const specs = [m.state, m.serial ? `S/N ${m.serial}` : null, formatHours(m.hours), m.powerType && m.powerType !== 'Not specified' ? m.powerType : null].filter(Boolean);
+    return `
+      <div class="asc-card glass" data-idx="${idx}">
+        <div class="asc-card-img-wrap">
+          ${m.category ? `<div class="asc-badge ${m.category.toLowerCase()}">${escapeHtml(m.category)}</div>` : ''}
+          <div class="asc-price-tag">${formatPrice(m.price)}</div>
+          ${img ? `<img src="${escapeHtml(img)}" alt="${escapeHtml(m.name)}" loading="lazy">` : `<div class="asc-card-noimg">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#6E7681" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="#6E7681" stroke-width="1.4"/><path d="M21 16L15 11L5 19" stroke="#6E7681" stroke-width="1.6"/></svg>
+              No photos yet</div>`}
+          ${m.images && m.images.length ? `<div class="asc-photo-count">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#fff" stroke-width="1.8"/><circle cx="9" cy="10" r="1.6" stroke="#fff" stroke-width="1.4"/></svg>
+              ${m.images.length}</div>` : ''}
+        </div>
+        <div class="asc-card-body">
+          <h3 class="asc-card-name">${escapeHtml(m.name || 'Unnamed Unit')}</h3>
+          <div class="asc-card-specs asc-mono">${specs.map(s => `<span>${escapeHtml(s)}</span>`).join('')}</div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderAll() {
+    renderStats();
+    const list = getFiltered();
+    if (!list.length) {
+      grid.innerHTML = `<div class="asc-state-msg">
+        <div class="asc-display" style="font-size:16px;">No machines match your filters</div>
+        <span class="asc-mono">Try clearing the search or selecting a different category.</span>
+      </div>`;
+      return;
+    }
+    grid.innerHTML = list.map((m, i) => cardTemplate(m, i)).join('');
+    grid.__list = list;
+    grid.querySelectorAll('.asc-card').forEach(card => {
+      card.addEventListener('click', () => openLightbox(grid.__list[Number(card.dataset.idx)]));
+    });
+  }
+
+  searchInput.addEventListener('input', () => { state.search = searchInput.value.trim(); renderAll(); });
+  stateSelect.addEventListener('change', () => { state.location = stateSelect.value; renderAll(); });
+  sortSelect.addEventListener('change', () => { state.sort = sortSelect.value; renderAll(); });
+
+  /* ---- Lightbox ---- */
+  const lbEl = document.getElementById('asc-lightbox');
+  const lbImg = document.getElementById('asc-lightbox-img');
+  const lbThumbs = document.getElementById('asc-lightbox-thumbs');
+  const lbName = document.getElementById('asc-lightbox-name');
+  const lbCategory = document.getElementById('asc-lightbox-category');
+  const lbSpecs = document.getElementById('asc-lightbox-specs');
+  const lbPrice = document.getElementById('asc-lightbox-price');
+  const lbNotes = document.getElementById('asc-lightbox-notes');
+  const lbNotesText = document.getElementById('asc-lightbox-notes-text');
+  const lbDownloadBtn = document.getElementById('asc-download-btn');
+  const lbDownloadLabel = document.getElementById('asc-download-btn-label');
+
+  function slugify(str) {
+    return String(str || 'machine').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'machine';
+  }
+
+  async function downloadPhotos() {
+    const m = lightbox.machine;
+    const images = (m && m.images) || [];
+    if (!images.length || lbDownloadBtn.disabled) return;
+    lbDownloadBtn.disabled = true;
+    lbDownloadLabel.textContent = 'Preparing…';
+    try {
+      const zip = new JSZip();
+      const base = slugify(m.name) + (m.serial ? '-' + slugify(m.serial) : '');
+      await Promise.all(images.map(async (path, i) => {
+        const res = await fetch(path);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const blob = await res.blob();
+        const ext = (path.split('.').pop() || 'jpg').split(/[?#]/)[0];
+        zip.file(`${base}-${i + 1}.${ext}`, blob);
+      }));
+      const content = await zip.generateAsync({ type: 'blob' });
+      const url = URL.createObjectURL(content);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${base}-photos.zip`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 4000);
+    } catch (err) {
+      alert("Couldn't download photos: " + err.message);
+    } finally {
+      lbDownloadBtn.disabled = false;
+      lbDownloadLabel.textContent = `Download Photos (${images.length})`;
+    }
+  }
+
+  lbDownloadBtn.addEventListener('click', downloadPhotos);
+
+  function specItem(label, value) {
+    return `<div class="asc-lightbox-spec-item"><span class="asc-lightbox-spec-label">${escapeHtml(label)}</span><span class="asc-lightbox-spec-value">${escapeHtml(value)}</span></div>`;
+  }
+
+  function openLightbox(machine) {
+    lightbox.machine = machine;
+    lightbox.photoIndex = 0;
+    renderLightbox();
+    lbEl.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lbEl.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function renderLightbox() {
+    const m = lightbox.machine;
+    if (!m) return;
+    const images = m.images && m.images.length ? m.images : [];
+    const src = images[lightbox.photoIndex] || '';
+    lbImg.src = src;
+    lbImg.alt = m.name || '';
+    lbName.textContent = m.name || 'Unnamed Unit';
+
+    if (m.category) {
+      lbCategory.textContent = m.category;
+      lbCategory.className = 'asc-lightbox-category ' + m.category.toLowerCase();
+      lbCategory.style.display = 'inline-flex';
+    } else {
+      lbCategory.style.display = 'none';
+    }
+
+    const specs = [];
+    if (m.state) specs.push(specItem('Location', m.state));
+    if (m.serial) specs.push(specItem('Serial No.', m.serial));
+    const hrs = formatHours(m.hours);
+    if (hrs) specs.push(specItem('Hours', hrs));
+    if (m.powerType && m.powerType !== 'Not specified') specs.push(specItem('Power', m.powerType));
+    lbSpecs.innerHTML = specs.join('') || `<div class="asc-lightbox-spec-item"><span class="asc-lightbox-spec-value" style="color:var(--ink-faint)">No additional details available</span></div>`;
+
+    if (m.notes && m.notes.trim()) {
+      lbNotesText.textContent = m.notes.trim();
+      lbNotes.style.display = 'flex';
+    } else {
+      lbNotes.style.display = 'none';
+    }
+
+    lbPrice.textContent = formatPrice(m.price);
+
+    lbDownloadBtn.classList.toggle('hidden', images.length === 0);
+    lbDownloadLabel.textContent = images.length ? `Download Photos (${images.length})` : 'Download Photos';
+
+    lbThumbs.style.display = images.length > 1 ? 'flex' : 'none';
+    lbThumbs.innerHTML = images.map((img, i) =>
+      `<img class="asc-lightbox-thumb ${i === lightbox.photoIndex ? 'active' : ''}" src="${escapeHtml(img)}" data-i="${i}">`
+    ).join('');
+    lbThumbs.querySelectorAll('.asc-lightbox-thumb').forEach(t => {
+      t.addEventListener('click', () => { lightbox.photoIndex = Number(t.dataset.i); renderLightbox(); });
+    });
+  }
+
+  function step(dir) {
+    const m = lightbox.machine;
+    if (!m || !m.images || !m.images.length) return;
+    lightbox.photoIndex = (lightbox.photoIndex + dir + m.images.length) % m.images.length;
+    renderLightbox();
+  }
+
+  document.getElementById('asc-close-btn').addEventListener('click', closeLightbox);
+  document.getElementById('asc-prev-btn').addEventListener('click', () => step(-1));
+  document.getElementById('asc-next-btn').addEventListener('click', () => step(1));
+  lbEl.addEventListener('click', e => { if (e.target === lbEl) closeLightbox(); });
+  document.addEventListener('keydown', e => {
+    if (!lbEl.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') step(-1);
+    if (e.key === 'ArrowRight') step(1);
+  });
+
+  let touchStartX = null;
+  lbEl.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  lbEl.addEventListener('touchend', e => {
+    if (touchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) step(dx > 0 ? -1 : 1);
+    touchStartX = null;
+  }, { passive: true });
+
+  loadData();
+})();
+</script>
+</body>
+</html>
