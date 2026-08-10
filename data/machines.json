@@ -96,30 +96,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2022 Model"
     },
-<<<<<<< HEAD
                 {
-=======
-    {
-      "id": "T3",
-      "name": "T3",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "NA",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "10000",
-      "sharepointUrl": "",
-      "images": [
-        "img/IMG_8942.webp",
-        "img/IMG_8947.webp",
-        "img/IMG_8945.webp",
-        "img/IMG_8948.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2015 Model"
-    },
-    {
->>>>>>> d219a088c6bf587f47ca8a26c7bf9b57921d4abc
       "id": "M8",
       "name": "M8",
       "state": "Sydney",
@@ -217,7 +194,6 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2017 Model"
     },
-<<<<<<< HEAD
   {
   "id": "M3",
   "name": "M3",
@@ -606,33 +582,6 @@
 },
 
                             {
-=======
-    {
-      "id": "T3",
-      "name": "T3",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "194",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "10000",
-      "sharepointUrl": "",
-      "images": [
-        "img/DSC05182.webp",
-        "img/DSC05183.webp",
-        "img/DSC05184.webp",
-        "img/DSC05185.webp",
-        "img/DSC05186.webp",
-        "img/DSC05187.webp",
-        "img/DSC05188.webp",
-        "img/DSC05189.webp",
-        "img/DSC05190.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": ""
-    },
-    {
->>>>>>> d219a088c6bf587f47ca8a26c7bf9b57921d4abc
       "id": "TR",
       "name": "TR",
       "state": "Sydney",
