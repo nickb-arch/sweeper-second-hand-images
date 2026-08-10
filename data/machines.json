@@ -268,7 +268,12 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [],
+      "images": [
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/ingrandita_157.d1490779585-copy.webp",
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/ingrandita_159.d1490779601-copy-1024x576.webp",
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/ingrandita_162.d1490779770-copy.webp",
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/ingrandita_44.d1490095100-copy.webp"
+],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Unknown S/N, in racks, needs a charger Brand new"
     },
@@ -282,7 +287,12 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [],
+     "images": [
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/ingrandita_157.d1490779585-copy.webp",
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/ingrandita_159.d1490779601-copy-1024x576.webp",
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/ingrandita_162.d1490779770-copy.webp",
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/ingrandita_44.d1490095100-copy.webp"
+],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Unknown S/N, in racks.Brand new"
     },
@@ -310,7 +320,15 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [],
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/2.webp",
+         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/gemma-hd.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/img_7033.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/img_7037.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/img_7050.webp"
+
+
+      ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "In racks, unknown S/N Brand new. High dump P3. Google Gemma E78 DSA"
     },
@@ -324,7 +342,9 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [],
+      "images": [
+          "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/OIP.webp"
+      ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Unknown S/N, in racks.Brand new"
     },
@@ -338,7 +358,10 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [],
+      "images": [
+                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum2.webp",
+         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum.webp"
+      ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Unknown S/N, in racks. Brand new"
     },
@@ -352,7 +375,8 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [],
+      "images": [                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum2.webp",
+         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum.webp"],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Unknown S/N, in racks.Brand new"
     },
@@ -366,7 +390,8 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [],
+      "images": [                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum2.webp",
+         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/factorycat-magnum.webp"],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Unknown S/N, in racks.Brand new"
     },
@@ -450,7 +475,11 @@
       "powerType": "Not specified",
       "price": "NA",
       "sharepointUrl": "",
-      "images": [],
+      "images": [
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/dulevo_52_walk_behind_sweeper.webp",
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/52-image-3-850x478.webp",
+  "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/52-image-4-720x480.webp"
+],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Photos not added yet."
     },
