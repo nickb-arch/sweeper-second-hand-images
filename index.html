@@ -4,9 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Second-Hand Equipment Directory - Sales Tool</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+
+<style>
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 
@@ -341,7 +345,7 @@ select option { background: #fff; color: var(--ink); }
         <button class="asc-nav-btn prev" id="asc-prev-btn" aria-label="Previous photo">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <img id="asc-lightbox-img" src="" alt="">
+        <img id="asc-lightbox-img" src="" alt="" decoding="async">
         <button class="asc-nav-btn next" id="asc-next-btn" aria-label="Next photo">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -373,7 +377,6 @@ select option { background: #fff; color: var(--ink); }
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script>
 (function () {
   const DATA_URL = 'data/machines.json';
@@ -484,7 +487,7 @@ select option { background: #fff; color: var(--ink); }
         <div class="asc-card-img-wrap">
           ${m.category ? `<div class="asc-badge ${m.category.toLowerCase()}">${escapeHtml(m.category)}</div>` : ''}
           <div class="asc-price-tag">${formatPrice(m.price)}</div>
-          ${img ? `<img src="${escapeHtml(img)}" alt="${escapeHtml(m.name)}" loading="lazy">` : `<div class="asc-card-noimg">
+          ${img ? `<img src="${escapeHtml(img)}" alt="${escapeHtml(m.name)}" width="400" height="300" loading="lazy" decoding="async">` : `<div class="asc-card-noimg">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#6E7681" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="#6E7681" stroke-width="1.4"/><path d="M21 16L15 11L5 19" stroke="#6E7681" stroke-width="1.6"/></svg>
               No photos yet</div>`}
           ${m.images && m.images.length ? `<div class="asc-photo-count">
@@ -538,6 +541,20 @@ select option { background: #fff; color: var(--ink); }
     return String(str || 'machine').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'machine';
   }
 
+  let jsZipLoadPromise = null;
+  function loadJSZip() {
+    if (window.JSZip) return Promise.resolve();
+    if (jsZipLoadPromise) return jsZipLoadPromise;
+    jsZipLoadPromise = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js';
+      script.onload = resolve;
+      script.onerror = () => reject(new Error('Failed to load ZIP library'));
+      document.head.appendChild(script);
+    });
+    return jsZipLoadPromise;
+  }
+
   async function downloadPhotos() {
     const m = lightbox.machine;
     const images = (m && m.images) || [];
@@ -545,6 +562,7 @@ select option { background: #fff; color: var(--ink); }
     lbDownloadBtn.disabled = true;
     lbDownloadLabel.textContent = 'Preparing…';
     try {
+      await loadJSZip();
       const zip = new JSZip();
       const base = slugify(m.name) + (m.serial ? '-' + slugify(m.serial) : '');
       await Promise.all(images.map(async (path, i) => {
@@ -631,7 +649,7 @@ select option { background: #fff; color: var(--ink); }
 
     lbThumbs.style.display = images.length > 1 ? 'flex' : 'none';
     lbThumbs.innerHTML = images.map((img, i) =>
-      `<img class="asc-lightbox-thumb ${i === lightbox.photoIndex ? 'active' : ''}" src="${escapeHtml(img)}" data-i="${i}">`
+      `<img class="asc-lightbox-thumb ${i === lightbox.photoIndex ? 'active' : ''}" src="${escapeHtml(img)}" data-i="${i}" width="60" height="60" loading="lazy" decoding="async">`
     ).join('');
     lbThumbs.querySelectorAll('.asc-lightbox-thumb').forEach(t => {
       t.addEventListener('click', () => { lightbox.photoIndex = Number(t.dataset.i); renderLightbox(); });
