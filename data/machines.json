@@ -138,7 +138,7 @@
     },
     {
       "id": "E110",
-      "name": "E110",
+      "name": "E110 Cylindrical",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "1158",
@@ -371,7 +371,7 @@
       "id": "FCTR",
       "name": "FCTR",
       "state": "Sydney",
-      "category": "Scrubber",
+      "category": "Sweeper",
       "serial": "NA",
       "hours": "NA",
       "powerType": "Not specified",

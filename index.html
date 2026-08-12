@@ -117,6 +117,15 @@ select option { background: #fff; color: var(--ink); }
 .asc-stat-sweeper .asc-stat-num { color: var(--ink); }
 .asc-stat-scrubber .asc-stat-num { color: var(--teal-dark); }
 
+/* ---- Model counts ---- */
+.asc-model-counts { display: flex; flex-wrap: wrap; gap: 8px; margin: -8px 0 22px; }
+.asc-count-chip {
+  display: flex; align-items: center; gap: 8px; padding: 7px 13px; border-radius: 20px;
+  background: #FFFFFF; border: 1px solid var(--border); font-family: 'Inter', sans-serif;
+}
+.asc-count-name { font-size: 12.5px; font-weight: 600; color: var(--ink-dim); }
+.asc-count-num { font-size: 12.5px; font-weight: 700; color: var(--teal-dark); }
+
 /* ---- Grid ---- */
 .asc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
 
@@ -322,6 +331,7 @@ select option { background: #fff; color: var(--ink); }
   </header>
 
   <div class="asc-stats" id="asc-stats"></div>
+  <div class="asc-model-counts" id="asc-model-counts"></div>
 
   <main class="asc-grid" id="asc-grid">
     <div class="asc-state-msg">
@@ -387,6 +397,7 @@ select option { background: #fff; color: var(--ink); }
   const grid = document.getElementById('asc-grid');
   const chipsEl = document.getElementById('asc-chips');
   const statsEl = document.getElementById('asc-stats');
+  const modelCountsEl = document.getElementById('asc-model-counts');
   const searchInput = document.getElementById('asc-search-input');
   const stateSelect = document.getElementById('asc-state-select');
   const sortSelect = document.getElementById('asc-sort-select');
@@ -418,6 +429,7 @@ select option { background: #fff; color: var(--ink); }
       populateStateOptions();
       renderChips();
       renderAll();
+      renderModelCounts();
     } catch (err) {
       grid.innerHTML = `<div class="asc-state-msg">
         <div class="asc-display" style="font-size:16px;">Couldn't load the equipment database</div>
@@ -466,6 +478,28 @@ select option { background: #fff; color: var(--ink); }
       return new Date(b.dateAdded || 0) - new Date(a.dateAdded || 0);
     });
     return list;
+  }
+
+  /* Grab just the model key (first two words, e.g. "M6 LPG" out of
+     "M6 LPG Ride-On Sweeper") rather than matching the whole name string,
+     so units get grouped correctly even when the rest of the name varies. */
+  function getModelKey(m) {
+    const name = String((m && m.name) || '').trim();
+    if (!name) return 'Unnamed';
+    return name.split(/\s+/).slice(0, 2).join(' ');
+  }
+
+  function renderModelCounts() {
+    const counts = {};
+    MACHINES.forEach(m => {
+      const key = getModelKey(m);
+      counts[key] = (counts[key] || 0) + 1;
+    });
+    // Alphabetical order by model key
+    const keys = Object.keys(counts).sort((a, b) => a.localeCompare(b));
+    modelCountsEl.innerHTML = keys.map(k =>
+      `<div class="asc-count-chip"><span class="asc-count-name">${escapeHtml(k)}</span><span class="asc-count-num asc-mono">×${counts[k]}</span></div>`
+    ).join('');
   }
 
   function renderStats() {
