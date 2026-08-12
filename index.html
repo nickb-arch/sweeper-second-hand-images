@@ -480,13 +480,16 @@ select option { background: #fff; color: var(--ink); }
     return list;
   }
 
-  /* Grab just the model key (first two words, e.g. "M6 LPG" out of
-     "M6 LPG Ride-On Sweeper") rather than matching the whole name string,
-     so units get grouped correctly even when the rest of the name varies. */
+  /* Grab just the model key from the name (e.g. "M6 LPG" out of
+     "M6 LPG Ride-On Sweeper"), ignoring pure numbers/serials so that
+     variants like "M3 EB 1201", "M3 1201 EB" and "M3 1150 EB" all
+     collapse into the same "M3 EB" group instead of splitting apart. */
   function getModelKey(m) {
     const name = String((m && m.name) || '').trim();
     if (!name) return 'Unnamed';
-    return name.split(/\s+/).slice(0, 2).join(' ');
+    const words = name.split(/\s+/).filter(w => !/^\d+$/.test(w));
+    const source = words.length ? words : name.split(/\s+/);
+    return source.slice(0, 2).join(' ');
   }
 
   /* Fixed display order: match on the model code CONTAINED in the key
