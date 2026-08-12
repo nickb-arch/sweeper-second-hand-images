@@ -489,14 +489,30 @@ select option { background: #fff; color: var(--ink); }
     return name.split(/\s+/).slice(0, 2).join(' ');
   }
 
+  /* Fixed display order: match on the model code CONTAINED in the key
+     (not an exact/whole-string match), in this priority order. Anything
+     that doesn't contain one of these codes falls into "the rest". */
+  const MODEL_ORDER = ['M8', 'M6', 'M5', 'M3', 'M2', 'M1', 'ME', 'E110', 'E85', 'E83', 'E81', 'E71', 'E61', 'E51', 'TR'];
+
+  function getModelPriority(key) {
+    for (let i = 0; i < MODEL_ORDER.length; i++) {
+      if (key.includes(MODEL_ORDER[i])) return i;
+    }
+    return MODEL_ORDER.length; // "the rest"
+  }
+
   function renderModelCounts() {
     const counts = {};
     MACHINES.forEach(m => {
       const key = getModelKey(m);
       counts[key] = (counts[key] || 0) + 1;
     });
-    // Alphabetical order by model key
-    const keys = Object.keys(counts).sort((a, b) => a.localeCompare(b));
+    const keys = Object.keys(counts).sort((a, b) => {
+      const pa = getModelPriority(a);
+      const pb = getModelPriority(b);
+      if (pa !== pb) return pa - pb;
+      return a.localeCompare(b); // alphabetical within the same priority group
+    });
     modelCountsEl.innerHTML = keys.map(k =>
       `<div class="asc-count-chip"><span class="asc-count-name">${escapeHtml(k)}</span><span class="asc-count-num asc-mono">×${counts[k]}</span></div>`
     ).join('');
