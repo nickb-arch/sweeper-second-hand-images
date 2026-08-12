@@ -141,28 +141,17 @@
       "name": "E110 Cylindrical",
       "state": "Sydney",
       "category": "Sweeper",
-      "serial": "1158",
+      "serial": "NA",
       "hours": "NA",
       "powerType": "Not specified",
       "price": "25000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05219.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05220.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05221.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05222.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05223.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05224.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05225.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05226.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05227.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05228.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05229.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05230.webp",
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05231.webp"
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": ""
+      "notes": "Not specified yet. No overhead guard. Photos to be updated."
     },
     {
       "id": "M6",
