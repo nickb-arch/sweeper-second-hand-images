@@ -503,7 +503,7 @@ select option { background: #fff; color: var(--ink); }
   /* Fixed display order: match on the model code CONTAINED in the key
      (not an exact/whole-string match), in this priority order. Anything
      that doesn't contain one of these codes falls into "the rest". */
-  const MODEL_ORDER = ['M8', 'M6', 'M5', 'M3', 'M2', 'M1', 'ME', 'E110', 'E85', 'E83', 'E81', 'E71', 'E61', 'E51', 'TR'];
+  const MODEL_ORDER = ['M8', 'P7', 'M6', 'M5', 'P5', 'M3', 'P3', 'T3','M2', 'M1', 'ME', 'TR', 'E110', 'E85', 'E83', 'E81', 'E71', 'E61', 'E51', 'TR'];
 
   function getModelPriority(key) {
     for (let i = 0; i < MODEL_ORDER.length; i++) {
