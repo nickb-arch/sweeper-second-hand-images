@@ -1570,19 +1570,21 @@
       "dateAdded": "2026-07-29T01:09:57.114223Z"
     },
     {
-      "id": "m_1ad75fbc83",
+      "id": "M6LPG",
       "name": "M6 LPG",
       "state": "Melbourne",
       "category": "Sweeper",
-      "serial": "NA",
+      "serial": "0149",
       "hours": "NA",
       "powerType": "LPG",
-      "price": "",
+      "price": "30000",
       "sharepointUrl": "",
       "images": [
-
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/M6-1.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/M6-2.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/M6-3.webp"
       ],
-      "notes": "Waiting photos red machine in Melb warehouse.",
+      "notes": "2011 Model",
       "dateAdded": "2026-07-29T01:09:57.114223Z"
     },
     {
