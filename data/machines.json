@@ -26,7 +26,7 @@
     },
     {
       "id": "m_seedE51",
-      "name": "E51",
+      "name": "E51 Base",
       "state": "Queensland",
       "category": "Scrubber",
       "serial": "2493",
@@ -166,7 +166,7 @@
     },
     {
       "id": "M6",
-      "name": "M6",
+      "name": "M6 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "0110",
@@ -196,7 +196,7 @@
     },
     {
       "id": "M3",
-      "name": "M3",
+      "name": "M3 1201 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "2155",
@@ -291,7 +291,7 @@
     },
     {
       "id": "D74",
-      "name": "D74",
+      "name": "D74 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "NA",
@@ -310,7 +310,7 @@
     },
     {
       "id": "D74",
-      "name": "D74",
+      "name": "D74 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "NA",
@@ -346,7 +346,7 @@
     },
     {
       "id": "P5",
-      "name": "P5",
+      "name": "P5 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "00563",
@@ -520,7 +520,7 @@
     },
     {
       "id": "ME",
-      "name": "ME",
+      "name": "ASC ME",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "19319",
@@ -536,7 +536,7 @@
       "id": "ASC GO",
       "name": "GO",
       "state": "Sydney",
-      "category": "Sweeper",
+      "category": "Scrubber",
       "serial": "NA",
       "hours": "NA",
       "powerType": "Not specified",
@@ -554,7 +554,7 @@
       "id": "E110",
       "name": "E110",
       "state": "Sydney",
-      "category": "Sweeper",
+      "category": "Scrubber",
       "serial": "1158",
       "hours": "NA",
       "powerType": "Not specified",
@@ -605,7 +605,7 @@
     },
     {
       "id": "M3",
-      "name": "M3",
+      "name": "M3 1201 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "5622",
@@ -652,26 +652,8 @@
     },
 
 
-
-            {
-      "id": "M40",
-      "name": "D200",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "NA",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "NA",
-      "sharepointUrl": "",
-      "images": [
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "Photos not listed or price, coming soon. Still in workshop"
-    },
-
-
    {
-      "id": "M8",
+      "id": "M8 Diesel",
       "name": "M8",
       "state": "Sydney",
       "category": "Sweeper",
@@ -690,7 +672,7 @@
       "id": "E51",
       "name": "E51 Base",
       "state": "Sydney",
-      "category": "Sweeper",
+      "category": "Scrubber",
       "serial": "2129",
       "hours": "NA",
       "powerType": "Not specified",
@@ -716,25 +698,6 @@
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": " Model"
-    },
-    {
-      "id": "M3",
-      "name": "M3",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "NA",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "10000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8942.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8947.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8945.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8948.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2015 Model"
     },
     {
       "id": "M6",
@@ -888,7 +851,7 @@
     },
     {
       "id": "M3",
-      "name": "M3",
+      "name": "M3 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "0144",
@@ -912,7 +875,7 @@
     },
     {
       "id": "M3",
-      "name": "M3",
+      "name": "M3 1150 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "5474",
@@ -938,7 +901,7 @@
     },
     {
       "id": "M3",
-      "name": "M3",
+      "name": "M3 1150 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "4668",
@@ -962,7 +925,7 @@
     },
     {
       "id": "M5",
-      "name": "M5",
+      "name": "M5 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "833",
@@ -988,7 +951,7 @@
     },
     {
       "id": "M6",
-      "name": "M6",
+      "name": "M6 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "1239",
@@ -1017,7 +980,7 @@
     },
     {
       "id": "M1",
-      "name": "M1",
+      "name": "M1 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "6696",
@@ -1048,7 +1011,7 @@
     },
     {
       "id": "m_seedP3",
-      "name": "P3",
+      "name": "P3 EB",
       "state": "Queensland",
       "category": "Sweeper",
       "serial": "4836",
@@ -1068,7 +1031,7 @@
     },
     {
       "id": "M1Queensland",
-      "name": "M1",
+      "name": "M1 EB",
       "state": "Queensland",
       "category": "Sweeper",
       "serial": "6489",
@@ -1088,7 +1051,7 @@
     },
     {
       "id": "M3Qld",
-      "name": "M3",
+      "name": "M3 1201 EB",
       "state": "Queensland",
       "category": "Sweeper",
       "serial": "1764",
@@ -1158,7 +1121,7 @@
     },
     {
       "id": "M3Qld4",
-      "name": "M3",
+      "name": "M3 1201 EB",
       "state": "Queensland",
       "category": "Sweeper",
       "serial": "0256",
@@ -1178,7 +1141,7 @@
     },
     {
       "id": "M3Qld1",
-      "name": "M3",
+      "name": "M3 1201 EB",
       "state": "Queensland",
       "category": "Sweeper",
       "serial": "0797",
@@ -1198,7 +1161,7 @@
     },
     {
       "id": "M3Qld2",
-      "name": "M3",
+      "name": "M3 1150 EB",
       "state": "Queensland",
       "category": "Sweeper",
       "serial": "5558",
@@ -1217,7 +1180,7 @@
     },
     {
       "id": "m_seed02",
-      "name": "M3",
+      "name": "M3 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "2010",
@@ -1243,7 +1206,7 @@
     },
     {
       "id": "m_seed03",
-      "name": "M6",
+      "name": "M6 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "0608",
@@ -1268,7 +1231,7 @@
     },
     {
       "id": "m_seed04",
-      "name": "M3",
+      "name": "M3 1150 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "5065",
@@ -1294,7 +1257,7 @@
     },
     {
       "id": "m_seed04",
-      "name": "M1",
+      "name": "M1 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "6545",
@@ -1320,7 +1283,7 @@
     },
     {
       "id": "m_seed05",
-      "name": "M3",
+      "name": "M3 1201 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "1878",
@@ -1345,7 +1308,7 @@
     },
     {
       "id": "m_seed06",
-      "name": "M3",
+      "name": "M3 1201 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "5514",
@@ -1367,7 +1330,7 @@
     },
     {
       "id": "m_seed07",
-      "name": "M6",
+      "name": "M6 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "1273",
@@ -1396,7 +1359,7 @@
     },
     {
       "id": "m_seed08",
-      "name": "M6",
+      "name": "M6 LPG",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "115",
@@ -1422,7 +1385,7 @@
     },
     {
       "id": "m_seed09",
-      "name": "M6",
+      "name": "M6 EB",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "0288",
@@ -1447,7 +1410,7 @@
     },
     {
       "id": "m_seed10",
-      "name": "P7",
+      "name": "P7 Diesel",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "0023",
@@ -1478,7 +1441,7 @@
     },
     {
       "id": "m_seed11",
-      "name": "M6",
+      "name": "M6 LPG",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "0234",
@@ -1511,7 +1474,7 @@
     },
     {
       "id": "m_seed12",
-      "name": "M6",
+      "name": "M6 LPG",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "0223",
