@@ -258,6 +258,37 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2020 Model, photos not added yet. Or $170 p/w hire buy 12 month contract"
     },
+
+        {
+      "id": "E61",
+      "name": "E61",
+      "state": "Sydney",
+      "category": "Scrubber",
+      "serial": "1133",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "No photos added yet. ECO version"
+    },
+
+    
+        {
+      "id": "E71",
+      "name": "E71",
+      "state": "Sydney",
+      "category": "Scrubber",
+      "serial": "1113",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "No photos added yet. ECO version"
+    },
     {
       "id": "D74",
       "name": "D74",
