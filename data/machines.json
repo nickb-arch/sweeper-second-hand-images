@@ -631,6 +631,61 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2014 Model"
     },
+
+
+
+
+        {
+      "id": "D200",
+      "name": "D200",
+      "state": "Sydney",
+      "category": "Sweeper",
+      "serial": "NA",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Photos not listed or price, coming soon."
+    },
+
+
+
+            {
+      "id": "M40",
+      "name": "D200",
+      "state": "Sydney",
+      "category": "Sweeper",
+      "serial": "NA",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Photos not listed or price, coming soon. Still in workshop"
+    },
+
+
+   {
+      "id": "M8",
+      "name": "M8",
+      "state": "Sydney",
+      "category": "Sweeper",
+      "serial": "NA",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Photos not listed or price, coming soon. Still in workshop"
+    },
+
     {
       "id": "E51",
       "name": "E51 Base",
@@ -1050,6 +1105,56 @@
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": ""
+    },
+
+
+
+     {
+      "id": "M6",
+      "name": "M6 LPG",
+      "state": "Queensland",
+      "category": "Sweeper",
+      "serial": "0235",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "No photos yet. Confirm refurbished properly and price"
+    },
+     {
+      "id": "E81",
+      "name": "E81",
+      "state": "Queensland",
+      "category": "Scrubber",
+      "serial": "1646",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "No photos yet. Confirm refurbished properly and price"
+    },
+
+
+         {
+      "id": "E81",
+      "name": "E81",
+      "state": "Queensland",
+      "category": "Scrubber",
+      "serial": "1511",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "No photos yet. Confirm refurbished properly and price"
     },
     {
       "id": "M3Qld4",
