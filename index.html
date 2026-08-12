@@ -302,7 +302,7 @@ select option { background: #fff; color: var(--ink); }
           </svg>
         </div>
         <div class="asc-wordmark">
-          <div class="asc-wordmark-title">Australian <span>Sweeper</span> Company</div>
+          <div class="asc-wordmark-title">Australian <span>Sweeper</span> Company.</div>
           <div class="asc-wordmark-sub">Sweepers &amp; Scrubbers</div>
         </div>
       </div>
@@ -320,6 +320,7 @@ select option { background: #fff; color: var(--ink); }
       </div>
       <select id="asc-state-select" class="asc-select"><option value="All">All Locations</option></select>
       <select id="asc-sort-select" class="asc-select">
+        <option value="model">Model Order</option>
         <option value="newest">Newest First</option>
         <option value="price-asc">Price: Low to High</option>
         <option value="price-desc">Price: High to Low</option>
@@ -391,7 +392,7 @@ select option { background: #fff; color: var(--ink); }
 (function () {
   const DATA_URL = 'data/machines.json';
   let MACHINES = [];
-  let state = { search: '', category: 'All', location: 'All', sort: 'newest' };
+  let state = { search: '', category: 'All', location: 'All', sort: 'model' };
   let lightbox = { machine: null, photoIndex: 0 };
 
   const grid = document.getElementById('asc-grid');
@@ -475,6 +476,13 @@ select option { background: #fff; color: var(--ink); }
       if (state.sort === 'price-asc') return (Number(String(a.price||'').replace(/,/g,'')) || Infinity) - (Number(String(b.price||'').replace(/,/g,'')) || Infinity);
       if (state.sort === 'price-desc') return (Number(String(b.price||'').replace(/,/g,'')) || -Infinity) - (Number(String(a.price||'').replace(/,/g,'')) || -Infinity);
       if (state.sort === 'hours-asc') return (Number(a.hours) || Infinity) - (Number(b.hours) || Infinity);
+      if (state.sort === 'model') {
+        const ka = getModelKey(a), kb = getModelKey(b);
+        const pa = getModelPriority(ka), pb = getModelPriority(kb);
+        if (pa !== pb) return pa - pb;
+        if (ka !== kb) return ka.localeCompare(kb);
+        return new Date(b.dateAdded || 0) - new Date(a.dateAdded || 0);
+      }
       return new Date(b.dateAdded || 0) - new Date(a.dateAdded || 0);
     });
     return list;
