@@ -477,6 +477,13 @@ select option { background: #fff; color: var(--ink); }
       if (state.sort === 'price-desc') return (Number(String(b.price||'').replace(/,/g,'')) || -Infinity) - (Number(String(a.price||'').replace(/,/g,'')) || -Infinity);
       if (state.sort === 'hours-asc') return (Number(a.hours) || Infinity) - (Number(b.hours) || Infinity);
       if (state.sort === 'model') {
+        if (a.category === 'Scrubber' && b.category === 'Scrubber') {
+          const la = getLocationPriority(a.state), lb = getLocationPriority(b.state);
+          if (la !== lb) return la - lb;
+          if (la === SCRUBBER_LOCATION_ORDER.length && a.state !== b.state) {
+            return String(a.state || '').localeCompare(String(b.state || ''));
+          }
+        }
         const ka = getModelKey(a), kb = getModelKey(b);
         const pa = getModelPriority(ka), pb = getModelPriority(kb);
         if (pa !== pb) return pa - pb;
@@ -510,6 +517,15 @@ select option { background: #fff; color: var(--ink); }
       if (key.includes(MODEL_ORDER[i])) return i;
     }
     return MODEL_ORDER.length; // "the rest"
+  }
+
+  /* Fixed display order for Scrubbers, by location. Anything not in this
+     list falls after the named locations, in alphabetical order. */
+  const SCRUBBER_LOCATION_ORDER = ['Sydney', 'Queensland', 'Melbourne', 'Adelaide', 'WA'];
+
+  function getLocationPriority(loc) {
+    const idx = SCRUBBER_LOCATION_ORDER.indexOf(String(loc || '').trim());
+    return idx === -1 ? SCRUBBER_LOCATION_ORDER.length : idx;
   }
 
   function renderModelCounts() {
