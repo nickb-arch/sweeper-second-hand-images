@@ -243,7 +243,19 @@
       "powerType": "Not specified",
       "price": "7000",
       "sharepointUrl": "",
-      "images": [],
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05460.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05461.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05462.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05463.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05464.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05465.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05466.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05467.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05468.webp",
+                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05469.webp"
+
+      ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2020 Model, photos not added yet. Or $170 p/w hire buy 12 month contract"
     },
@@ -374,48 +386,7 @@
       "notes": "Unknown S/N, in racks.Brand new"
     },
 
-    {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1510",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "10000",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2019 Model, photos not added yet. Looks good condition"
-    },
-    {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1340",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "7000",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2016 Model, photos not added yet. E81 V2"
-    },
-    {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1395",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "7000",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2017 Model - photos not added yet"
-    },
+
     {
       "id": "Dulevo52EH",
       "name": "D52EH",
