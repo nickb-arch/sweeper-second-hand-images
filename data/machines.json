@@ -137,23 +137,6 @@
       "notes": ""
     },
     {
-      "id": "E110",
-      "name": "E110 Cylindrical",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "NA",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "25000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05219.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05231.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "Not specified yet. No overhead guard. Photos to be updated."
-    },
-    {
       "id": "M6",
       "name": "M6 EB",
       "state": "Sydney",
@@ -405,20 +388,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Photos not added yet."
     },
-    {
-      "id": "ME",
-      "name": "ASC ME",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "19319",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "500",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "Photos not added yet."
-    },
+
     {
       "id": "ASC GO",
       "name": "GO",
