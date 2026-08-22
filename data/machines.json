@@ -247,34 +247,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2020 Model, photos not added yet. Or $170 p/w hire buy 12 month contract"
     },
-    {
-      "id": "E61",
-      "name": "E61",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1133",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "NA",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "No photos added yet. ECO version"
-    },
-    {
-      "id": "E71",
-      "name": "E71",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1113",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "NA",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "No photos added yet. ECO version"
-    },
+
     {
       "id": "D74",
       "name": "D74 EB",
@@ -400,20 +373,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Unknown S/N, in racks.Brand new"
     },
-    {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1046",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "10000",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2010 Model, photos not added yet."
-    },
+
     {
       "id": "E81",
       "name": "E81",
@@ -427,20 +387,6 @@
       "images": [],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2019 Model, photos not added yet. Looks good condition"
-    },
-    {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1048",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "7000",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2012 Model, photos not added yet."
     },
     {
       "id": "E81",
@@ -533,7 +479,7 @@
       "name": "E110",
       "state": "Sydney",
       "category": "Scrubber",
-      "serial": "1158",
+      "serial": "1097",
       "hours": "NA",
       "powerType": "Not specified",
       "price": "25000",
@@ -1950,23 +1896,6 @@
       ],
       "notes": "Not working.",
       "dateAdded": "2026-07-29T01:09:57.114223Z"
-    },
-    {
-      "id": "ASC GO",
-      "name": "GO",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "NA",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "800",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/OIP (3).webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/OIP (4).webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "Photos not added yet."
     },
     {
       "id": "E110",
