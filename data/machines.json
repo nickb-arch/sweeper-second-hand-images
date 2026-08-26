@@ -1181,26 +1181,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": ""
     },
-    {
-      "id": "M3Qld",
-      "name": "M3 1201 EB",
-      "state": "Queensland",
-      "category": "Sweeper",
-      "serial": "1764",
-      "hours": "162.3",
-      "powerType": "Not specified",
-      "price": "15000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8956.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8957.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8958.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8960.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8961.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": ""
-    },
+
     {
       "id": "M6",
       "name": "M6 LPG",
@@ -1259,26 +1240,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "No photos yet. Confirm refurbished properly and price"
     },
-    {
-      "id": "M3Qld4",
-      "name": "M3 1201 EB",
-      "state": "Queensland",
-      "category": "Sweeper",
-      "serial": "0256",
-      "hours": "1980.1",
-      "powerType": "Not specified",
-      "price": "15000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8976.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8975.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8974.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8973.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8977.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "M3 1201"
-    },
+
     {
       "id": "M3Qld1",
       "name": "M3 1201 EB",
