@@ -303,11 +303,11 @@ select option { background: #fff; color: var(--ink); }
   position: fixed; inset: 0; z-index: 9999;
   background: var(--bg);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .asc-login-box {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--glass-border);
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 48px 40px;
   width: 100%; max-width: 400px;
@@ -331,8 +331,8 @@ select option { background: #fff; color: var(--ink); }
   font-size: 12px; font-weight: 600; color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.05em;
 }
 .asc-login-field input {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--glass-border);
+  background: #FFFFFF;
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--ink); font-size: 14px; font-family: inherit;
   padding: 12px 14px; outline: none;
@@ -348,13 +348,34 @@ select option { background: #fff; color: var(--ink); }
 }
 .asc-login-btn:hover { background: #016e79; }
 .asc-login-error {
-  text-align: center; font-size: 13px; color: var(--red);
+  text-align: center; font-size: 13px; color: #DC2626;
   display: none;
 }
 
 </style>
 </head>
 <body>
+
+<!-- Login Screen -->
+<div id="asc-login-screen">
+  <div class="asc-login-box">
+    <div class="asc-login-logo">
+      <img src="img/asclogo.webp" alt="ASC Logo">
+    </div>
+    <h2 class="asc-login-title">Sales Portal</h2>
+    <p class="asc-login-sub">Australian Sweeper Company — Staff Access Only</p>
+    <div class="asc-login-field">
+      <label>Username</label>
+      <input type="text" id="asc-username" placeholder="Enter your username" autocomplete="username">
+    </div>
+    <div class="asc-login-field">
+      <label>Password</label>
+      <input type="password" id="asc-password" placeholder="Enter your password" autocomplete="current-password">
+    </div>
+    <p class="asc-login-error" id="asc-login-error">Incorrect username or password.</p>
+    <button class="asc-login-btn" onclick="ascLogin()">Sign In</button>
+  </div>
+</div>
 
 <div id="asc-root">
 
@@ -369,7 +390,7 @@ select option { background: #fff; color: var(--ink); }
           </svg>
         </div>
         <div class="asc-wordmark">
-          <div class="asc-wordmark-title">Australian <span>Sweeper</span> Company.</div>
+          <div class="asc-wordmark-title">Australian <span>Sweeper</span> Company</div>
           <div class="asc-wordmark-sub">Sweepers &amp; Scrubbers</div>
         </div>
       </div>
@@ -858,7 +879,7 @@ select option { background: #fff; color: var(--ink); }
 
   const WORKER_URL = 'https://asc-image-proxy.nickb-338.workers.dev';
   const SESSION_KEY = 'asc_session';
-  const SESSION_DURATION = 60 * 60 * 1000;
+  const SESSION_DURATION = 60 * 60 * 1000; // 1 hour in ms
 
   function ascCheckSession() {
     try {
@@ -882,6 +903,7 @@ select option { background: #fff; color: var(--ink); }
       sessionStorage.setItem(SESSION_KEY, JSON.stringify({ user, ts: Date.now() }));
       document.getElementById('asc-login-screen').style.display = 'none';
       err.style.display = 'none';
+      // Log the login to worker
       fetch(WORKER_URL + '/log-login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -892,12 +914,14 @@ select option { background: #fff; color: var(--ink); }
     }
   }
 
+  // Allow Enter key to submit
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Enter' && document.getElementById('asc-login-screen').style.display !== 'none') {
       ascLogin();
     }
   });
 
+  // Check session on load
   (function() {
     const user = ascCheckSession();
     if (user) {
