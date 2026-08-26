@@ -369,7 +369,7 @@ select option { background: #fff; color: var(--ink); }
           </svg>
         </div>
         <div class="asc-wordmark">
-          <div class="asc-wordmark-title">Australian <span>Sweeper</span> Company</div>
+          <div class="asc-wordmark-title">Australian <span>Sweeper</span> Company.</div>
           <div class="asc-wordmark-sub">Sweepers &amp; Scrubbers</div>
         </div>
       </div>
@@ -858,7 +858,7 @@ select option { background: #fff; color: var(--ink); }
 
   const WORKER_URL = 'https://asc-image-proxy.nickb-338.workers.dev';
   const SESSION_KEY = 'asc_session';
-  const SESSION_DURATION = 60 * 60 * 1000; // 1 hour in ms
+  const SESSION_DURATION = 60 * 60 * 1000;
 
   function ascCheckSession() {
     try {
@@ -882,7 +882,6 @@ select option { background: #fff; color: var(--ink); }
       sessionStorage.setItem(SESSION_KEY, JSON.stringify({ user, ts: Date.now() }));
       document.getElementById('asc-login-screen').style.display = 'none';
       err.style.display = 'none';
-      // Log the login to worker
       fetch(WORKER_URL + '/log-login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -893,14 +892,12 @@ select option { background: #fff; color: var(--ink); }
     }
   }
 
-  // Allow Enter key to submit
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Enter' && document.getElementById('asc-login-screen').style.display !== 'none') {
       ascLogin();
     }
   });
 
-  // Check session on load
   (function() {
     const user = ascCheckSession();
     if (user) {
