@@ -43,6 +43,213 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": ""
     },
+
+
+
+        {
+      "id": "M6WA",
+      "name": "M6",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "274",
+      "hours": "162.9",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-1.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-2.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-3.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-4.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-5.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-6.webp"
+
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "No overhead guard. Double side brooms."
+    },
+
+
+            {
+      "id": "e81WA",
+      "name": "E81",
+      "state": "WA",
+      "category": "Scrubber",
+      "serial": "1182",
+      "hours": "6045.5",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-7.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-8.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-9.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-10.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-11.webp"
+
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": ""
+    },
+
+
+
+                {
+      "id": "LitterVac",
+      "name": "PowerVac",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "13207N",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-12.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-13.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-14.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-15.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": ""
+    },
+
+
+
+                    {
+      "id": "E81",
+      "name": "E81",
+      "state": "WA",
+      "category": "Scrubber",
+      "serial": "1181",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-16.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-17.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-18.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-19.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": ""
+    },
+
+
+
+                        {
+      "id": "M3WA",
+      "name": "M3",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "1131",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-20.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-21.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-22.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-23.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-24.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-25.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Vacuum Kit"
+    },
+
+                       {
+      "id": "M6WA",
+      "name": "M6 Diesel",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "0497",
+      "hours": "3495.4",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-29.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-30.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-31.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-28.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-27.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-26.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Overhead guard, double side broom"
+    },
+
+
+
+
+                           {
+      "id": "M6WA",
+      "name": "M6 Diesel",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "0609",
+      "hours": "512.7",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-32.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-33.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-34.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-35.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-36.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-37.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Overhead guard, double side broom"
+    },
+
+                           {
+      "id": "M5",
+      "name": "M5 Battery",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "1361",
+      "hours": "128.7",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-38.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-39.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-40.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-41.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-42.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Overhead guard, double side broom"
+    },
+
+
+                               {
+      "id": "M5",
+      "name": "M5 Battery",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "1333",
+      "hours": "258.3",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-43.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-44.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-45.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-46.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-47.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Overhead guard, double side broom"
+    },
+
     {
       "id": "M3",
       "name": "M3 EB 1201",
