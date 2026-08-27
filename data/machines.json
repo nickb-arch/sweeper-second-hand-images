@@ -43,6 +43,213 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": ""
     },
+
+
+
+        {
+      "id": "M6WA",
+      "name": "M6",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "274",
+      "hours": "162.9",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-2.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-3.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-1.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-4.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-5.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-6.webp"
+
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "No overhead guard. Double side brooms."
+    },
+
+
+            {
+      "id": "e81WA",
+      "name": "E81",
+      "state": "WA",
+      "category": "Scrubber",
+      "serial": "1182",
+      "hours": "6045.5",
+      "powerType": "Not specified",
+      "price": "7000",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-7.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-8.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-9.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-10.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-11.webp"
+
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": ""
+    },
+
+
+
+                {
+      "id": "LitterVac",
+      "name": "PowerVac",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "13207N",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-15.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-14.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-13.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-12.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": ""
+    },
+
+
+
+                    {
+      "id": "E81",
+      "name": "E81",
+      "state": "WA",
+      "category": "Scrubber",
+      "serial": "1181",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "7000",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-16.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-17.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-18.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-19.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": ""
+    },
+
+
+
+                        {
+      "id": "M3WA",
+      "name": "M3",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "1131",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-20.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-21.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-22.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-23.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-24.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-25.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Vacuum Kit"
+    },
+
+                       {
+      "id": "M6WA",
+      "name": "M6 Diesel",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "0497",
+      "hours": "3495.4",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-29.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-30.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-31.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-28.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-27.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-26.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Overhead guard, double side broom"
+    },
+
+
+
+
+                           {
+      "id": "M6WA",
+      "name": "M6 Diesel",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "0609",
+      "hours": "512.7",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-32.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-33.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-34.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-35.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-36.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-37.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Overhead guard, double side broom"
+    },
+
+                           {
+      "id": "M5",
+      "name": "M5 Battery",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "1361",
+      "hours": "128.7",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-39.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-38.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-40.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-41.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-42.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Overhead guard, double side broom"
+    },
+
+
+                               {
+      "id": "M5",
+      "name": "M5 Battery",
+      "state": "WA",
+      "category": "Sweeper",
+      "serial": "1333",
+      "hours": "258.3",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-43.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-44.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-45.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-46.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/WA-47.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Overhead guard, double side broom"
+    },
+
     {
       "id": "M3",
       "name": "M3 EB 1201",
@@ -137,23 +344,6 @@
       "notes": ""
     },
     {
-      "id": "E110",
-      "name": "E110 Cylindrical",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "NA",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "25000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05219.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05231.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "Not specified yet. No overhead guard. Photos to be updated."
-    },
-    {
       "id": "M6",
       "name": "M6 EB",
       "state": "Sydney",
@@ -243,38 +433,23 @@
       "powerType": "Not specified",
       "price": "7000",
       "sharepointUrl": "",
-      "images": [],
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05460.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05461.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05462.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05463.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05464.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05465.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05466.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05467.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05468.webp",
+                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05469.webp"
+
+      ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2020 Model, photos not added yet. Or $170 p/w hire buy 12 month contract"
     },
-    {
-      "id": "E61",
-      "name": "E61",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1133",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "NA",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "No photos added yet. ECO version"
-    },
-    {
-      "id": "E71",
-      "name": "E71",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1113",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "NA",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "No photos added yet. ECO version"
-    },
+
     {
       "id": "D74",
       "name": "D74 EB",
@@ -338,7 +513,7 @@
       "serial": "00563",
       "hours": "NA",
       "powerType": "Not specified",
-      "price": "NA",
+      "price": "28000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/gemma-hd.webp",
@@ -400,76 +575,8 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Unknown S/N, in racks.Brand new"
     },
-    {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1046",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "10000",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2010 Model, photos not added yet."
-    },
-    {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1510",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "10000",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2019 Model, photos not added yet. Looks good condition"
-    },
-    {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1048",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "7000",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2012 Model, photos not added yet."
-    },
-    {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1340",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "7000",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2016 Model, photos not added yet. E81 V2"
-    },
-    {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1395",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "7000",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2017 Model - photos not added yet"
-    },
+
+
     {
       "id": "Dulevo52EH",
       "name": "D52EH",
@@ -478,7 +585,7 @@
       "serial": "NA",
       "hours": "NA",
       "powerType": "Not specified",
-      "price": "NA",
+      "price": "3000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/dulevo_52_walk_behind_sweeper.webp",
@@ -488,20 +595,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Photos not added yet."
     },
-    {
-      "id": "ME",
-      "name": "ASC ME",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "19319",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "500",
-      "sharepointUrl": "",
-      "images": [],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "Photos not added yet."
-    },
+
     {
       "id": "ASC GO",
       "name": "GO",
@@ -533,7 +627,7 @@
       "name": "E110",
       "state": "Sydney",
       "category": "Scrubber",
-      "serial": "1158",
+      "serial": "1097",
       "hours": "NA",
       "powerType": "Not specified",
       "price": "25000",
@@ -580,7 +674,7 @@
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05595.webp"
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": ""
+      "notes": "3M Safety Light"
     },
     {
       "id": "TR",
@@ -643,7 +737,7 @@
       "serial": "NA",
       "hours": "NA",
       "powerType": "Not specified",
-      "price": "NA",
+      "price": "35000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/D200.webp",
@@ -1105,26 +1199,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": ""
     },
-    {
-      "id": "M3Qld",
-      "name": "M3 1201 EB",
-      "state": "Queensland",
-      "category": "Sweeper",
-      "serial": "1764",
-      "hours": "162.3",
-      "powerType": "Not specified",
-      "price": "15000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8956.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8957.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8958.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8960.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8961.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": ""
-    },
+
     {
       "id": "M6",
       "name": "M6 LPG",
@@ -1183,26 +1258,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "No photos yet. Confirm refurbished properly and price"
     },
-    {
-      "id": "M3Qld4",
-      "name": "M3 1201 EB",
-      "state": "Queensland",
-      "category": "Sweeper",
-      "serial": "0256",
-      "hours": "1980.1",
-      "powerType": "Not specified",
-      "price": "15000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8976.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8975.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8974.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8973.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_8977.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "M3 1201"
-    },
+
     {
       "id": "M3Qld1",
       "name": "M3 1201 EB",
@@ -1301,7 +1357,7 @@
       "serial": "5065",
       "hours": "352.6",
       "powerType": "Not specified",
-      "price": "",
+      "price": "12000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04786.webp",
@@ -1455,7 +1511,7 @@
       "serial": "0288",
       "hours": "488.6",
       "powerType": "LPG",
-      "price": "",
+      "price": "15000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed09_1.webp",
@@ -1470,7 +1526,7 @@
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed09_10.webp"
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": ""
+      "notes": "Additional cost if battery required"
     },
     {
       "id": "m_seed10",
@@ -1576,7 +1632,7 @@
       "serial": "0558",
       "hours": "935",
       "powerType": "Not specified",
-      "price": "",
+      "price": "16000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_3077.webp",
@@ -1594,7 +1650,7 @@
       "serial": "",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "10000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_3074.webp",
@@ -1612,7 +1668,7 @@
       "serial": "1133",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "4000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05430.webp",
@@ -1636,7 +1692,7 @@
       "serial": "1113",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "7000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05439.webp",
@@ -1653,41 +1709,7 @@
       "notes": "2011 Model",
       "dateAdded": "2026-07-29T01:09:57.114223Z"
     },
-    {
-      "id": "m_65d4394e7a",
-      "name": "E71",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1395",
-      "hours": "",
-      "powerType": "Not specified",
-      "price": "",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05450.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05451.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05452.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05453.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05454.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05455.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05456.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05457.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05458.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05459.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05460.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05461.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05462.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05463.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05464.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05465.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05466.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05467.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05468.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05469.webp"
-      ],
-      "notes": "2011 Model",
-      "dateAdded": "2026-07-29T01:09:57.114223Z"
-    },
+  
     {
       "id": "m_65d4394e7a",
       "name": "E81",
@@ -1696,7 +1718,7 @@
       "serial": "1395",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "7000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05471.webp",
@@ -1720,7 +1742,7 @@
       "serial": "1510",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "7000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05482.webp",
@@ -1745,7 +1767,7 @@
       "serial": "1046",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "7000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05493.webp",
@@ -1769,7 +1791,7 @@
       "serial": "1048",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "7000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05503.webp",
@@ -1792,7 +1814,7 @@
       "serial": "1340",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "7000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05513.webp",
@@ -1818,7 +1840,7 @@
       "serial": "NA",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "6000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05526.webp",
@@ -1842,7 +1864,7 @@
       "serial": "19319",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "400",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05536.webp",
@@ -1856,13 +1878,13 @@
     },
     {
       "id": "m_65d4394e7a",
-      "name": "ASC D",
+      "name": "ASC D700 Special",
       "state": "Sydney",
       "category": "Sweeper",
       "serial": "19319",
       "hours": "",
       "powerType": "Not specified",
-      "price": "",
+      "price": "2000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05561.webp",
@@ -1886,7 +1908,7 @@
       "serial": "NA",
       "hours": "NA",
       "powerType": "Not specified",
-      "price": "",
+      "price": "3000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05542.webp",
@@ -1907,7 +1929,7 @@
       "serial": "0225",
       "hours": "458",
       "powerType": "Not specified",
-      "price": "",
+      "price": "16000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_3093.webp",
@@ -1943,14 +1965,14 @@
       "serial": "1238",
       "hours": "2256",
       "powerType": "Electric Battery (EB)",
-      "price": "",
+      "price": "15000",
       "sharepointUrl": "",
       "images": [
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_3084.webp",
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_3086.webp",
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/IMG_3087.webp"
       ],
-      "notes": "battery has to be repaired as it leaks ",
+      "notes": "battery has to be repaired as it leaks + battery extra cost ",
       "dateAdded": "2026-07-29T01:09:57.114223Z"
     },
     {
@@ -2004,23 +2026,6 @@
       "dateAdded": "2026-07-29T01:09:57.114223Z"
     },
     {
-      "id": "ASC GO",
-      "name": "GO",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "NA",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "800",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/OIP (3).webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/OIP (4).webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "Photos not added yet."
-    },
-    {
       "id": "E110",
       "name": "E110",
       "state": "Sydney",
@@ -2046,7 +2051,7 @@
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05231.webp"
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": ""
+      "notes": "Overhead guard"
     }
   ]
 }
