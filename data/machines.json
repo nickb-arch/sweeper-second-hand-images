@@ -766,6 +766,24 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2015 Model"
     },
+
+
+        {
+      "id": "E85",
+      "name": "E85",
+      "state": "Sydney",
+      "category": "Scrubber",
+      "serial": "1092",
+      "hours": "151",
+      "powerType": "Not specified",
+      "price": "5000",
+      "sharepointUrl": "",
+      "images": [
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Getting reburbished. New brushes, new skirts. Need photos"
+    },
+
     {
       "id": "M1",
       "name": "M1",
