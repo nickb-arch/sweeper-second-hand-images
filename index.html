@@ -352,6 +352,53 @@ select option { background: #fff; color: var(--ink); }
   display: none;
 }
 
+/* ── Announcements ─────────────────────────────────────────────────────────── */
+.asc-announce-section { padding: 22px 26px; margin-bottom: 20px; }
+.asc-announce-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+.asc-announce-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 20px; margin: 0; letter-spacing: -0.01em; }
+.asc-announce-title .accent { color: var(--teal); }
+.asc-announce-sub { color: var(--ink-dim); font-size: 13px; margin: 4px 0 0; }
+.asc-announce-admin-tag {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 5px 12px; border-radius: 20px; background: var(--teal-tint); color: var(--teal-dark);
+  border: 1px solid rgba(1,129,142,0.25); display: none; align-items: center;
+}
+
+.asc-announce-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 1100px) { .asc-announce-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .asc-announce-grid { grid-template-columns: 1fr; } }
+
+.asc-announce-card { border: 1px solid var(--border); border-radius: var(--radius-md); background: #FFFFFF; display: flex; flex-direction: column; }
+.asc-announce-card-head { padding: 13px 16px; border-bottom: 1px solid var(--border); background: var(--teal-tint); border-radius: var(--radius-md) var(--radius-md) 0 0; }
+.asc-announce-card-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; color: var(--teal-dark); margin: 0; letter-spacing: 0.01em; }
+.asc-announce-list { padding: 12px 16px; display: flex; flex-direction: column; gap: 12px; flex: 1; overflow-y: auto; max-height: 260px; }
+.asc-announce-item { padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.asc-announce-item:last-child { border-bottom: none; padding-bottom: 0; }
+.asc-announce-item-text { font-size: 13px; color: var(--ink); line-height: 1.5; white-space: pre-line; margin: 0 0 6px; }
+.asc-announce-item-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 11px; color: var(--ink-faint); }
+.asc-announce-remove-btn { border: none; background: none; color: #DC2626; font-size: 11px; font-weight: 700; cursor: pointer; padding: 0; font-family: inherit; }
+.asc-announce-remove-btn:hover { text-decoration: underline; }
+.asc-announce-empty { font-size: 12.5px; color: var(--ink-faint); padding: 4px 0; }
+.asc-announce-compose { padding: 12px 16px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px; background: #FAFBFC; border-radius: 0 0 var(--radius-md) var(--radius-md); }
+.asc-announce-compose textarea {
+  width: 100%; font-family: 'Inter', sans-serif; font-size: 13px; padding: 10px 12px;
+  border: 1px solid var(--border); border-radius: var(--radius-sm); resize: vertical; min-height: 60px; outline: none; color: var(--ink);
+}
+.asc-announce-compose textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-tint); }
+.asc-announce-publish-btn {
+  align-self: flex-end; background: var(--teal); color: #fff; border: none; border-radius: var(--radius-sm);
+  padding: 8px 16px; font-size: 12.5px; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .15s;
+}
+.asc-announce-publish-btn:hover:not(:disabled) { background: #016e79; }
+.asc-announce-publish-btn:disabled { opacity: 0.5; cursor: default; }
+.asc-announce-status { font-size: 12.5px; color: var(--ink-faint); padding: 4px 26px 18px; }
+.asc-announce-status.error { color: #DC2626; }
+
+@media (max-width: 720px) {
+  .asc-announce-section { padding: 18px 16px; }
+  .asc-announce-title { font-size: 17px; }
+}
+
 </style>
 </head>
 <body>
@@ -418,6 +465,18 @@ select option { background: #fff; color: var(--ink); }
 
     <div class="asc-chips" id="asc-chips"></div>
   </header>
+
+  <section class="glass asc-announce-section" id="asc-announce-section">
+    <div class="asc-announce-head">
+      <div>
+        <h2 class="asc-announce-title">📣 <span class="accent">Announcements</span></h2>
+        <p class="asc-announce-sub">Company updates by category — published by admin only.</p>
+      </div>
+      <span class="asc-announce-admin-tag" id="asc-announce-admin-tag">Admin — Publishing enabled</span>
+    </div>
+    <div class="asc-announce-grid" id="asc-announce-grid"></div>
+    <div class="asc-announce-status" id="asc-announce-status">Loading announcements…</div>
+  </section>
 
   <div class="asc-stats" id="asc-stats"></div>
   <div class="asc-model-counts" id="asc-model-counts"></div>
@@ -909,6 +968,7 @@ select option { background: #fff; color: var(--ink); }
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user, time: new Date().toISOString() })
       }).catch(() => {});
+      if (window.ascReloadAnnouncements) window.ascReloadAnnouncements();
     } else {
       err.style.display = 'block';
     }
@@ -927,6 +987,133 @@ select option { background: #fff; color: var(--ink); }
     if (user) {
       document.getElementById('asc-login-screen').style.display = 'none';
     }
+  })();
+
+  // ── Announcements ────────────────────────────────────────────────────────
+  (function () {
+    const ANNOUNCE_CATS = ['Parts List Information', 'Sales Information', 'Machine Information', 'Current Objectives'];
+    const ANNOUNCE_ADMIN = 'tony';
+
+    const gridEl = document.getElementById('asc-announce-grid');
+    const statusEl = document.getElementById('asc-announce-status');
+    const adminTag = document.getElementById('asc-announce-admin-tag');
+    let ANNOUNCEMENTS = [];
+
+    function escapeHtml(str) {
+      return String(str ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    function isAdminNow() {
+      return ascCheckSession() === ANNOUNCE_ADMIN;
+    }
+
+    function fmtDate(iso) {
+      try {
+        return new Date(iso).toLocaleString('en-AU', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+      } catch { return ''; }
+    }
+
+    async function loadAnnouncements() {
+      statusEl.style.display = 'block';
+      statusEl.classList.remove('error');
+      statusEl.textContent = 'Loading announcements…';
+      try {
+        const res = await fetch(WORKER_URL + '/announcements', { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const json = await res.json();
+        ANNOUNCEMENTS = json.announcements || [];
+        statusEl.style.display = 'none';
+        renderAnnouncements();
+      } catch (err) {
+        statusEl.textContent = "Couldn't load announcements right now (" + err.message + ").";
+        statusEl.classList.add('error');
+      }
+    }
+
+    async function publish(category, text, btn, textarea) {
+      const trimmed = text.trim();
+      if (!trimmed) return;
+      btn.disabled = true;
+      const prevLabel = btn.textContent;
+      btn.textContent = 'Publishing…';
+      try {
+        const res = await fetch(WORKER_URL + '/announcements', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ category, text: trimmed, author: ANNOUNCE_ADMIN })
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        textarea.value = '';
+        await loadAnnouncements();
+      } catch (err) {
+        alert("Couldn't publish announcement: " + err.message);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = prevLabel;
+      }
+    }
+
+    async function remove(id) {
+      if (!confirm('Remove this announcement? This cannot be undone.')) return;
+      try {
+        const res = await fetch(WORKER_URL + '/announcements/' + encodeURIComponent(id), { method: 'DELETE' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        await loadAnnouncements();
+      } catch (err) {
+        alert("Couldn't remove announcement: " + err.message);
+      }
+    }
+
+    function renderAnnouncements() {
+      const admin = isAdminNow();
+      adminTag.style.display = admin ? 'inline-flex' : 'none';
+
+      gridEl.innerHTML = ANNOUNCE_CATS.map(cat => {
+        const items = ANNOUNCEMENTS
+          .filter(a => a.category === cat)
+          .sort((a, b) => new Date(b.ts) - new Date(a.ts));
+
+        const listHtml = items.length
+          ? items.map(a => `
+              <div class="asc-announce-item">
+                <p class="asc-announce-item-text">${escapeHtml(a.text)}</p>
+                <div class="asc-announce-item-meta">
+                  <span>${fmtDate(a.ts)}</span>
+                  ${admin ? `<button class="asc-announce-remove-btn" data-id="${escapeHtml(a.id)}">Remove</button>` : ''}
+                </div>
+              </div>`).join('')
+          : `<div class="asc-announce-empty">No announcements yet.</div>`;
+
+        const composeHtml = admin ? `
+          <div class="asc-announce-compose">
+            <textarea placeholder="Write a ${escapeHtml(cat)} announcement…" data-cat="${escapeHtml(cat)}"></textarea>
+            <button class="asc-announce-publish-btn" data-cat="${escapeHtml(cat)}" type="button">Publish</button>
+          </div>` : '';
+
+        return `
+          <div class="asc-announce-card">
+            <div class="asc-announce-card-head"><h3 class="asc-announce-card-title">${escapeHtml(cat)}</h3></div>
+            <div class="asc-announce-list">${listHtml}</div>
+            ${composeHtml}
+          </div>`;
+      }).join('');
+
+      if (admin) {
+        gridEl.querySelectorAll('.asc-announce-publish-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const cat = btn.dataset.cat;
+            const textarea = gridEl.querySelector(`textarea[data-cat="${CSS.escape(cat)}"]`);
+            publish(cat, textarea.value, btn, textarea);
+          });
+        });
+        gridEl.querySelectorAll('.asc-announce-remove-btn').forEach(btn => {
+          btn.addEventListener('click', () => remove(btn.dataset.id));
+        });
+      }
+    }
+
+    window.ascReloadAnnouncements = loadAnnouncements;
+    loadAnnouncements();
   })();
 
 </script>
