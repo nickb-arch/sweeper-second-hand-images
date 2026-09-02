@@ -3,7 +3,7 @@
     {
       "id": "m_seed01",
       "name": "M3 EB 1201",
-      "state": "Sydney",
+      "state": "Melbourne",
       "category": "Sweeper",
       "serial": "1748",
       "hours": "452.5",
@@ -280,7 +280,7 @@
     {
       "id": "M3",
       "name": "M3 EB 1201",
-      "state": "Sydney",
+      "state": "Melbourne",
       "category": "Sweeper",
       "serial": "2155",
       "hours": "NA",
@@ -399,6 +399,26 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2022 Model"
     },
+
+
+
+
+     {
+      "id": "M3",
+      "name": "M3 1201 EB",
+      "state": "Melbourne",
+      "category": "Sweeper",
+      "serial": "1977",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Need photos taken"
+    },
+
     {
       "id": "T3",
       "name": "T3",
@@ -835,7 +855,7 @@
         {
       "id": "E85",
       "name": "E85",
-      "state": "Sydney",
+      "state": "Melbourne",
       "category": "Scrubber",
       "serial": "1092",
       "hours": "151",
@@ -845,7 +865,7 @@
       "images": [
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "Getting reburbished. New brushes, new skirts. Need photo taken"
+      "notes": ""
     },
 
     {
@@ -1532,7 +1552,7 @@
     {
       "id": "m_seed11",
       "name": "M6 LPG",
-      "state": "Sydney",
+      "state": "Melbourne",
       "category": "Sweeper",
       "serial": "0234",
       "hours": "488.8",
