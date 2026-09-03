@@ -444,33 +444,6 @@
       "notes": ""
     },
     {
-      "id": "E81",
-      "name": "E81",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1575",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "7000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05460.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05461.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05462.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05463.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05464.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05465.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05466.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05467.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05468.webp",
-                "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05469.webp"
-
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2020 Model, photos not added yet. Or $170 p/w hire buy 12 month contract"
-    },
-
-    {
       "id": "D74",
       "name": "D74 EB",
       "state": "Sydney",
@@ -721,34 +694,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": " Model"
     },
-    {
-      "id": "M3",
-      "name": "M3 1201 EB",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "5622",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "8000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05261.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05263.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05264.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05265.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05266.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05267.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05268.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05269.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05270.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05271.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05272.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05273.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05274.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2014 Model"
-    },
+
     {
       "id": "D200",
       "name": "D200",
