@@ -352,6 +352,7 @@ select option { background: #fff; color: var(--ink); }
   display: none;
 }
 
+<<<<<<< HEAD
 /* ── Announcements: header nav button ────────────────────────────────────── */
 .asc-announce-nav-btn {
   display: inline-flex; align-items: center; gap: 8px;
@@ -445,6 +446,53 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
   .asc-announce-page-title { font-size: 21px; }
   table.asc-announce-table td, table.asc-announce-table th { padding: 10px 12px; }
   .asc-announce-table td.date-col { width: auto; }
+=======
+/* ── Announcements ─────────────────────────────────────────────────────────── */
+.asc-announce-section { padding: 22px 26px; margin-bottom: 20px; }
+.asc-announce-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+.asc-announce-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 20px; margin: 0; letter-spacing: -0.01em; }
+.asc-announce-title .accent { color: var(--teal); }
+.asc-announce-sub { color: var(--ink-dim); font-size: 13px; margin: 4px 0 0; }
+.asc-announce-admin-tag {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 5px 12px; border-radius: 20px; background: var(--teal-tint); color: var(--teal-dark);
+  border: 1px solid rgba(1,129,142,0.25); display: none; align-items: center;
+}
+
+.asc-announce-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 1100px) { .asc-announce-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .asc-announce-grid { grid-template-columns: 1fr; } }
+
+.asc-announce-card { border: 1px solid var(--border); border-radius: var(--radius-md); background: #FFFFFF; display: flex; flex-direction: column; }
+.asc-announce-card-head { padding: 13px 16px; border-bottom: 1px solid var(--border); background: var(--teal-tint); border-radius: var(--radius-md) var(--radius-md) 0 0; }
+.asc-announce-card-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; color: var(--teal-dark); margin: 0; letter-spacing: 0.01em; }
+.asc-announce-list { padding: 12px 16px; display: flex; flex-direction: column; gap: 12px; flex: 1; overflow-y: auto; max-height: 260px; }
+.asc-announce-item { padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.asc-announce-item:last-child { border-bottom: none; padding-bottom: 0; }
+.asc-announce-item-text { font-size: 13px; color: var(--ink); line-height: 1.5; white-space: pre-line; margin: 0 0 6px; }
+.asc-announce-item-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 11px; color: var(--ink-faint); }
+.asc-announce-remove-btn { border: none; background: none; color: #DC2626; font-size: 11px; font-weight: 700; cursor: pointer; padding: 0; font-family: inherit; }
+.asc-announce-remove-btn:hover { text-decoration: underline; }
+.asc-announce-empty { font-size: 12.5px; color: var(--ink-faint); padding: 4px 0; }
+.asc-announce-compose { padding: 12px 16px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px; background: #FAFBFC; border-radius: 0 0 var(--radius-md) var(--radius-md); }
+.asc-announce-compose textarea {
+  width: 100%; font-family: 'Inter', sans-serif; font-size: 13px; padding: 10px 12px;
+  border: 1px solid var(--border); border-radius: var(--radius-sm); resize: vertical; min-height: 60px; outline: none; color: var(--ink);
+}
+.asc-announce-compose textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-tint); }
+.asc-announce-publish-btn {
+  align-self: flex-end; background: var(--teal); color: #fff; border: none; border-radius: var(--radius-sm);
+  padding: 8px 16px; font-size: 12.5px; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .15s;
+}
+.asc-announce-publish-btn:hover:not(:disabled) { background: #016e79; }
+.asc-announce-publish-btn:disabled { opacity: 0.5; cursor: default; }
+.asc-announce-status { font-size: 12.5px; color: var(--ink-faint); padding: 4px 26px 18px; }
+.asc-announce-status.error { color: #DC2626; }
+
+@media (max-width: 720px) {
+  .asc-announce-section { padding: 18px 16px; }
+  .asc-announce-title { font-size: 17px; }
+>>>>>>> 394bed58aa5db30e694394d744a4cc5e18bcdd0d
 }
 
 </style>
@@ -516,6 +564,18 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
 
     <div class="asc-chips" id="asc-chips"></div>
   </header>
+
+  <section class="glass asc-announce-section" id="asc-announce-section">
+    <div class="asc-announce-head">
+      <div>
+        <h2 class="asc-announce-title">📣 <span class="accent">Announcements</span></h2>
+        <p class="asc-announce-sub">Company updates by category — published by admin only.</p>
+      </div>
+      <span class="asc-announce-admin-tag" id="asc-announce-admin-tag">Admin — Publishing enabled</span>
+    </div>
+    <div class="asc-announce-grid" id="asc-announce-grid"></div>
+    <div class="asc-announce-status" id="asc-announce-status">Loading announcements…</div>
+  </section>
 
   <div class="asc-stats" id="asc-stats"></div>
   <div class="asc-model-counts" id="asc-model-counts"></div>
@@ -1058,6 +1118,7 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
     const ANNOUNCE_CATS = ['Parts List Information', 'Sales Information', 'Machine Information', 'Current Objectives'];
     const ANNOUNCE_ADMIN = 'tony';
 
+<<<<<<< HEAD
     const mainPage = document.getElementById('asc-root');
     const announcePage = document.getElementById('asc-page-announcements');
     const navBtn = document.getElementById('asc-announce-nav-btn');
@@ -1070,6 +1131,12 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
 
     let ANNOUNCEMENTS = [];
     let loadedOnce = false;
+=======
+    const gridEl = document.getElementById('asc-announce-grid');
+    const statusEl = document.getElementById('asc-announce-status');
+    const adminTag = document.getElementById('asc-announce-admin-tag');
+    let ANNOUNCEMENTS = [];
+>>>>>>> 394bed58aa5db30e694394d744a4cc5e18bcdd0d
 
     function escapeHtml(str) {
       return String(str ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -1085,6 +1152,7 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
       } catch { return ''; }
     }
 
+<<<<<<< HEAD
     // ---- Page navigation ----
     function openAnnouncePage() {
       mainPage.style.display = 'none';
@@ -1106,6 +1174,8 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
     if (backBtn) backBtn.addEventListener('click', closeAnnouncePage);
 
     // ---- Data ----
+=======
+>>>>>>> 394bed58aa5db30e694394d744a4cc5e18bcdd0d
     async function loadAnnouncements() {
       statusEl.style.display = 'block';
       statusEl.classList.remove('error');
@@ -1116,14 +1186,22 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
         const json = await res.json();
         ANNOUNCEMENTS = json.announcements || [];
         statusEl.style.display = 'none';
+<<<<<<< HEAD
         render();
+=======
+        renderAnnouncements();
+>>>>>>> 394bed58aa5db30e694394d744a4cc5e18bcdd0d
       } catch (err) {
         statusEl.textContent = "Couldn't load announcements right now (" + err.message + ").";
         statusEl.classList.add('error');
       }
     }
 
+<<<<<<< HEAD
     async function publish(category, text, btn, form) {
+=======
+    async function publish(category, text, btn, textarea) {
+>>>>>>> 394bed58aa5db30e694394d744a4cc5e18bcdd0d
       const trimmed = text.trim();
       if (!trimmed) return;
       btn.disabled = true;
@@ -1136,7 +1214,11 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
           body: JSON.stringify({ category, text: trimmed, author: ANNOUNCE_ADMIN })
         });
         if (!res.ok) throw new Error('HTTP ' + res.status);
+<<<<<<< HEAD
         form.querySelector('textarea').value = '';
+=======
+        textarea.value = '';
+>>>>>>> 394bed58aa5db30e694394d744a4cc5e18bcdd0d
         await loadAnnouncements();
       } catch (err) {
         alert("Couldn't publish announcement: " + err.message);
@@ -1157,6 +1239,7 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
       }
     }
 
+<<<<<<< HEAD
     // ---- Render ----
     function renderCompose(admin) {
       if (!admin) {
@@ -1184,10 +1267,18 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
 
     function renderTables(admin) {
       tablesEl.innerHTML = ANNOUNCE_CATS.map(cat => {
+=======
+    function renderAnnouncements() {
+      const admin = isAdminNow();
+      adminTag.style.display = admin ? 'inline-flex' : 'none';
+
+      gridEl.innerHTML = ANNOUNCE_CATS.map(cat => {
+>>>>>>> 394bed58aa5db30e694394d744a4cc5e18bcdd0d
         const items = ANNOUNCEMENTS
           .filter(a => a.category === cat)
           .sort((a, b) => new Date(b.ts) - new Date(a.ts));
 
+<<<<<<< HEAD
         const bodyHtml = items.length
           ? `
             <div class="asc-announce-table-wrap">
@@ -1218,16 +1309,52 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
               <span class="asc-announce-table-count">${items.length}</span>
             </div>
             ${bodyHtml}
+=======
+        const listHtml = items.length
+          ? items.map(a => `
+              <div class="asc-announce-item">
+                <p class="asc-announce-item-text">${escapeHtml(a.text)}</p>
+                <div class="asc-announce-item-meta">
+                  <span>${fmtDate(a.ts)}</span>
+                  ${admin ? `<button class="asc-announce-remove-btn" data-id="${escapeHtml(a.id)}">Remove</button>` : ''}
+                </div>
+              </div>`).join('')
+          : `<div class="asc-announce-empty">No announcements yet.</div>`;
+
+        const composeHtml = admin ? `
+          <div class="asc-announce-compose">
+            <textarea placeholder="Write a ${escapeHtml(cat)} announcement…" data-cat="${escapeHtml(cat)}"></textarea>
+            <button class="asc-announce-publish-btn" data-cat="${escapeHtml(cat)}" type="button">Publish</button>
+          </div>` : '';
+
+        return `
+          <div class="asc-announce-card">
+            <div class="asc-announce-card-head"><h3 class="asc-announce-card-title">${escapeHtml(cat)}</h3></div>
+            <div class="asc-announce-list">${listHtml}</div>
+            ${composeHtml}
+>>>>>>> 394bed58aa5db30e694394d744a4cc5e18bcdd0d
           </div>`;
       }).join('');
 
       if (admin) {
+<<<<<<< HEAD
         tablesEl.querySelectorAll('.asc-announce-remove-btn').forEach(btn => {
+=======
+        gridEl.querySelectorAll('.asc-announce-publish-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const cat = btn.dataset.cat;
+            const textarea = gridEl.querySelector(`textarea[data-cat="${CSS.escape(cat)}"]`);
+            publish(cat, textarea.value, btn, textarea);
+          });
+        });
+        gridEl.querySelectorAll('.asc-announce-remove-btn').forEach(btn => {
+>>>>>>> 394bed58aa5db30e694394d744a4cc5e18bcdd0d
           btn.addEventListener('click', () => remove(btn.dataset.id));
         });
       }
     }
 
+<<<<<<< HEAD
     function render() {
       const admin = isAdminNow();
       adminTag.style.display = admin ? 'inline-flex' : 'none';
@@ -1238,6 +1365,10 @@ table.asc-announce-table tr:hover td { background: #FAFBFC; }
     window.ascReloadAnnouncements = function () {
       if (loadedOnce) loadAnnouncements();
     };
+=======
+    window.ascReloadAnnouncements = loadAnnouncements;
+    loadAnnouncements();
+>>>>>>> 394bed58aa5db30e694394d744a4cc5e18bcdd0d
   })();
 
 </script>

@@ -3,7 +3,7 @@
     {
       "id": "m_seed01",
       "name": "M3 EB 1201",
-      "state": "Sydney",
+      "state": "Melbourne",
       "category": "Sweeper",
       "serial": "1748",
       "hours": "452.5",
@@ -280,7 +280,7 @@
     {
       "id": "M3",
       "name": "M3 EB 1201",
-      "state": "Sydney",
+      "state": "Melbourne",
       "category": "Sweeper",
       "serial": "2155",
       "hours": "NA",
@@ -399,6 +399,26 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "2022 Model"
     },
+
+
+
+
+     {
+      "id": "M3",
+      "name": "M3 1201 EB",
+      "state": "Melbourne",
+      "category": "Sweeper",
+      "serial": "1977",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "NA",
+      "sharepointUrl": "",
+      "images": [
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "Need photos taken"
+    },
+
     {
       "id": "T3",
       "name": "T3",
@@ -777,37 +797,7 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Photos not listed or price, coming soon. Still in workshop"
     },
-    {
-      "id": "E51",
-      "name": "E51 Base",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "2129",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "4000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05276.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05277.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05278.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05279.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05280.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05281.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05282.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05283.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05284.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05285.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05286.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05287.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05288.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05289.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05290.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05291.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": " Model"
-    },
+
     {
       "id": "M6",
       "name": "M6 LPG",
@@ -865,7 +855,7 @@
         {
       "id": "E85",
       "name": "E85",
-      "state": "Sydney",
+      "state": "Melbourne",
       "category": "Scrubber",
       "serial": "1092",
       "hours": "151",
@@ -873,9 +863,16 @@
       "price": "NA",
       "sharepointUrl": "",
       "images": [
+
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/E85-6.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/E85-5.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/E85-4.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/E85-3.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/E85-2.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/E85-1.webp"
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "Getting reburbished. New brushes, new skirts. Need photo taken"
+      "notes": ""
     },
 
     {
@@ -1562,7 +1559,7 @@
     {
       "id": "m_seed11",
       "name": "M6 LPG",
-      "state": "Sydney",
+      "state": "Melbourne",
       "category": "Sweeper",
       "serial": "0234",
       "hours": "488.8",
