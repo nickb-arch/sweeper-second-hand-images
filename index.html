@@ -352,6 +352,101 @@ select option { background: #fff; color: var(--ink); }
   display: none;
 }
 
+/* ── Announcements: header nav button ────────────────────────────────────── */
+.asc-announce-nav-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--teal); color: #fff; border: none; border-radius: var(--radius-sm);
+  padding: 10px 18px; font-family: 'Inter', sans-serif; font-size: 13.5px; font-weight: 700;
+  cursor: pointer; transition: background .15s;
+}
+.asc-announce-nav-btn:hover { background: #016e79; }
+.asc-announce-nav-btn span { font-size: 15px; }
+
+/* ── Announcements: dedicated page ───────────────────────────────────────── */
+.asc-announce-page {
+  display: none;
+  position: relative; z-index: 1; width: 100%;
+  min-height: 100vh; padding: 28px 32px 70px;
+}
+.asc-announce-page.is-active { display: block; }
+.asc-announce-page-inner { max-width: 980px; margin: 0 auto; }
+
+.asc-announce-back-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #FFFFFF; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 9px 16px 9px 12px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
+  color: var(--ink); cursor: pointer; margin-bottom: 24px; transition: background .15s, border-color .15s;
+}
+.asc-announce-back-btn:hover { background: var(--teal-tint); border-color: var(--teal); color: var(--teal-dark); }
+
+.asc-announce-page-head {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+  flex-wrap: wrap; margin-bottom: 22px;
+}
+.asc-announce-page-title { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 26px; margin: 0; letter-spacing: -0.01em; }
+.asc-announce-page-sub { color: var(--ink-dim); font-size: 13.5px; margin: 6px 0 0; }
+.asc-announce-admin-tag {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 6px 13px; border-radius: 20px; background: var(--teal-tint); color: var(--teal-dark);
+  border: 1px solid rgba(1,129,142,0.25); display: none; align-items: center; white-space: nowrap;
+}
+
+/* ── Announcements: admin compose panel ──────────────────────────────────── */
+.asc-announce-compose {
+  background: #FFFFFF; border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 18px; margin-bottom: 28px; display: flex; flex-direction: column; gap: 10px;
+}
+.asc-announce-compose-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; margin: 0 0 2px; color: var(--teal-dark); }
+.asc-announce-compose select, .asc-announce-compose textarea {
+  width: 100%; font-family: 'Inter', sans-serif; font-size: 13.5px; padding: 10px 12px;
+  border: 1px solid var(--border); border-radius: var(--radius-sm); outline: none; color: var(--ink); background: #fff;
+}
+.asc-announce-compose textarea { resize: vertical; min-height: 70px; }
+.asc-announce-compose select:focus, .asc-announce-compose textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-tint); }
+.asc-announce-publish-btn {
+  align-self: flex-end; background: var(--teal); color: #fff; border: none; border-radius: var(--radius-sm);
+  padding: 9px 20px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .15s;
+}
+.asc-announce-publish-btn:hover:not(:disabled) { background: #016e79; }
+.asc-announce-publish-btn:disabled { opacity: 0.5; cursor: default; }
+
+.asc-announce-status { font-size: 13px; color: var(--ink-faint); padding: 4px 0 18px; }
+.asc-announce-status.error { color: #DC2626; }
+
+/* ── Announcements: per-category tables ──────────────────────────────────── */
+.asc-announce-table-block { margin-bottom: 26px; }
+.asc-announce-table-head {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--teal); color: #fff; border-radius: var(--radius-md) var(--radius-md) 0 0;
+  padding: 12px 18px;
+}
+.asc-announce-table-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14.5px; margin: 0; letter-spacing: 0.01em; }
+.asc-announce-table-count {
+  font-size: 11px; font-weight: 700; background: rgba(255,255,255,0.22); padding: 2px 9px; border-radius: 20px;
+}
+.asc-announce-table-wrap { border: 1px solid var(--border); border-top: none; border-radius: 0 0 var(--radius-md) var(--radius-md); overflow: hidden; background: #fff; }
+table.asc-announce-table { width: 100%; border-collapse: collapse; }
+table.asc-announce-table th {
+  text-align: left; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: var(--ink-faint); background: #FAFBFC; padding: 10px 18px; border-bottom: 1px solid var(--border);
+}
+table.asc-announce-table td { padding: 14px 18px; border-bottom: 1px solid var(--border); font-size: 13.5px; color: var(--ink); vertical-align: top; }
+table.asc-announce-table tr:last-child td { border-bottom: none; }
+table.asc-announce-table tr:hover td { background: #FAFBFC; }
+.asc-announce-table td.date-col { white-space: nowrap; color: var(--ink-dim); font-size: 12.5px; width: 170px; }
+.asc-announce-table td.text-col { line-height: 1.55; white-space: pre-line; }
+.asc-announce-table td.action-col { width: 90px; text-align: right; }
+.asc-announce-remove-btn { border: none; background: none; color: #DC2626; font-size: 12px; font-weight: 700; cursor: pointer; padding: 0; font-family: inherit; }
+.asc-announce-remove-btn:hover { text-decoration: underline; }
+.asc-announce-table-empty { padding: 18px; font-size: 13px; color: var(--ink-faint); background: #fff; }
+
+@media (max-width: 720px) {
+  .asc-announce-page { padding: 18px 16px 50px; }
+  .asc-announce-page-title { font-size: 21px; }
+  table.asc-announce-table td, table.asc-announce-table th { padding: 10px 12px; }
+  .asc-announce-table td.date-col { width: auto; }
+}
+
 </style>
 </head>
 <body>
@@ -394,6 +489,9 @@ select option { background: #fff; color: var(--ink); }
           <div class="asc-wordmark-sub">Sweepers &amp; Scrubbers</div>
         </div>
       </div>
+      <button class="asc-announce-nav-btn" id="asc-announce-nav-btn" type="button">
+        <span>📣</span> Announcements
+      </button>
     </div>
 
     <div class="asc-hero">
@@ -431,6 +529,31 @@ select option { background: #fff; color: var(--ink); }
   <footer class="asc-footer">
     <strong>Australian Sweeper Company.</strong> — Second-Hand Equipment Directory
   </footer>
+</div>
+
+<div id="asc-page-announcements" class="asc-announce-page">
+  <div class="asc-announce-page-inner">
+
+    <button class="asc-announce-back-btn" id="asc-announce-back-btn" type="button">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Directory
+    </button>
+
+    <div class="asc-announce-page-head">
+      <div>
+        <h1 class="asc-announce-page-title">📣 Announcements</h1>
+        <p class="asc-announce-page-sub">Company updates by category — published by admin only.</p>
+      </div>
+      <span class="asc-announce-admin-tag" id="asc-announce-admin-tag">Admin — Publishing enabled</span>
+    </div>
+
+    <div id="asc-announce-compose-wrap"></div>
+
+    <div class="asc-announce-status" id="asc-announce-status">Loading announcements…</div>
+
+    <div id="asc-announce-tables"></div>
+
+  </div>
 </div>
 
 <div class="asc-lightbox" id="asc-lightbox">
@@ -909,6 +1032,7 @@ select option { background: #fff; color: var(--ink); }
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user, time: new Date().toISOString() })
       }).catch(() => {});
+      if (window.ascReloadAnnouncements) window.ascReloadAnnouncements();
     } else {
       err.style.display = 'block';
     }
@@ -927,6 +1051,193 @@ select option { background: #fff; color: var(--ink); }
     if (user) {
       document.getElementById('asc-login-screen').style.display = 'none';
     }
+  })();
+
+  // ── Announcements ────────────────────────────────────────────────────────
+  (function () {
+    const ANNOUNCE_CATS = ['Parts List Information', 'Sales Information', 'Machine Information', 'Current Objectives'];
+    const ANNOUNCE_ADMIN = 'tony';
+
+    const mainPage = document.getElementById('asc-root');
+    const announcePage = document.getElementById('asc-page-announcements');
+    const navBtn = document.getElementById('asc-announce-nav-btn');
+    const backBtn = document.getElementById('asc-announce-back-btn');
+
+    const composeWrap = document.getElementById('asc-announce-compose-wrap');
+    const tablesEl = document.getElementById('asc-announce-tables');
+    const statusEl = document.getElementById('asc-announce-status');
+    const adminTag = document.getElementById('asc-announce-admin-tag');
+
+    let ANNOUNCEMENTS = [];
+    let loadedOnce = false;
+
+    function escapeHtml(str) {
+      return String(str ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    function isAdminNow() {
+      return ascCheckSession() === ANNOUNCE_ADMIN;
+    }
+
+    function fmtDate(iso) {
+      try {
+        return new Date(iso).toLocaleString('en-AU', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+      } catch { return ''; }
+    }
+
+    // ---- Page navigation ----
+    function openAnnouncePage() {
+      mainPage.style.display = 'none';
+      announcePage.classList.add('is-active');
+      window.scrollTo(0, 0);
+      if (!loadedOnce) {
+        loadedOnce = true;
+        loadAnnouncements();
+      }
+    }
+
+    function closeAnnouncePage() {
+      announcePage.classList.remove('is-active');
+      mainPage.style.display = '';
+      window.scrollTo(0, 0);
+    }
+
+    if (navBtn) navBtn.addEventListener('click', openAnnouncePage);
+    if (backBtn) backBtn.addEventListener('click', closeAnnouncePage);
+
+    // ---- Data ----
+    async function loadAnnouncements() {
+      statusEl.style.display = 'block';
+      statusEl.classList.remove('error');
+      statusEl.textContent = 'Loading announcements…';
+      try {
+        const res = await fetch(WORKER_URL + '/announcements', { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const json = await res.json();
+        ANNOUNCEMENTS = json.announcements || [];
+        statusEl.style.display = 'none';
+        render();
+      } catch (err) {
+        statusEl.textContent = "Couldn't load announcements right now (" + err.message + ").";
+        statusEl.classList.add('error');
+      }
+    }
+
+    async function publish(category, text, btn, form) {
+      const trimmed = text.trim();
+      if (!trimmed) return;
+      btn.disabled = true;
+      const prevLabel = btn.textContent;
+      btn.textContent = 'Publishing…';
+      try {
+        const res = await fetch(WORKER_URL + '/announcements', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ category, text: trimmed, author: ANNOUNCE_ADMIN })
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.querySelector('textarea').value = '';
+        await loadAnnouncements();
+      } catch (err) {
+        alert("Couldn't publish announcement: " + err.message);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = prevLabel;
+      }
+    }
+
+    async function remove(id) {
+      if (!confirm('Remove this announcement? This cannot be undone.')) return;
+      try {
+        const res = await fetch(WORKER_URL + '/announcements/' + encodeURIComponent(id), { method: 'DELETE' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        await loadAnnouncements();
+      } catch (err) {
+        alert("Couldn't remove announcement: " + err.message);
+      }
+    }
+
+    // ---- Render ----
+    function renderCompose(admin) {
+      if (!admin) {
+        composeWrap.innerHTML = '';
+        return;
+      }
+      composeWrap.innerHTML = `
+        <div class="asc-announce-compose">
+          <h3 class="asc-announce-compose-title">Publish a new announcement</h3>
+          <select id="asc-announce-compose-cat">
+            ${ANNOUNCE_CATS.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('')}
+          </select>
+          <textarea id="asc-announce-compose-text" placeholder="Write your announcement…"></textarea>
+          <button class="asc-announce-publish-btn" id="asc-announce-compose-btn" type="button">Publish</button>
+        </div>`;
+
+      const btn = document.getElementById('asc-announce-compose-btn');
+      const form = composeWrap.querySelector('.asc-announce-compose');
+      btn.addEventListener('click', () => {
+        const cat = document.getElementById('asc-announce-compose-cat').value;
+        const text = document.getElementById('asc-announce-compose-text').value;
+        publish(cat, text, btn, form);
+      });
+    }
+
+    function renderTables(admin) {
+      tablesEl.innerHTML = ANNOUNCE_CATS.map(cat => {
+        const items = ANNOUNCEMENTS
+          .filter(a => a.category === cat)
+          .sort((a, b) => new Date(b.ts) - new Date(a.ts));
+
+        const bodyHtml = items.length
+          ? `
+            <div class="asc-announce-table-wrap">
+              <table class="asc-announce-table">
+                <thead>
+                  <tr>
+                    <th style="width:170px;">Date</th>
+                    <th>Announcement</th>
+                    ${admin ? '<th style="width:90px;"></th>' : ''}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${items.map(a => `
+                    <tr>
+                      <td class="date-col">${fmtDate(a.ts)}</td>
+                      <td class="text-col">${escapeHtml(a.text)}</td>
+                      ${admin ? `<td class="action-col"><button class="asc-announce-remove-btn" data-id="${escapeHtml(a.id)}">Remove</button></td>` : ''}
+                    </tr>`).join('')}
+                </tbody>
+              </table>
+            </div>`
+          : `<div class="asc-announce-table-wrap"><div class="asc-announce-table-empty">No announcements in this category yet.</div></div>`;
+
+        return `
+          <div class="asc-announce-table-block">
+            <div class="asc-announce-table-head">
+              <h2 class="asc-announce-table-title">${escapeHtml(cat)}</h2>
+              <span class="asc-announce-table-count">${items.length}</span>
+            </div>
+            ${bodyHtml}
+          </div>`;
+      }).join('');
+
+      if (admin) {
+        tablesEl.querySelectorAll('.asc-announce-remove-btn').forEach(btn => {
+          btn.addEventListener('click', () => remove(btn.dataset.id));
+        });
+      }
+    }
+
+    function render() {
+      const admin = isAdminNow();
+      adminTag.style.display = admin ? 'inline-flex' : 'none';
+      renderCompose(admin);
+      renderTables(admin);
+    }
+
+    window.ascReloadAnnouncements = function () {
+      if (loadedOnce) loadAnnouncements();
+    };
   })();
 
 </script>
