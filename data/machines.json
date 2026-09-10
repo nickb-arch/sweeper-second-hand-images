@@ -1855,26 +1855,6 @@
     },
     {
       "id": "m_65d4394e7a",
-      "name": "ASC ME",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "19319",
-      "hours": "",
-      "powerType": "Not specified",
-      "price": "400",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05536.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05537.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05538.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05539.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05540.webp"
-      ],
-      "notes": "2007 Model",
-      "dateAdded": "2026-07-29T01:09:57.114223Z"
-    },
-    {
-      "id": "m_65d4394e7a",
       "name": "ASC D700 Special",
       "state": "Sydney",
       "category": "Sweeper",
