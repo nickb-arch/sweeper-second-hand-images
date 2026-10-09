@@ -1605,30 +1605,6 @@
     },
     {
       "id": "m_65d4394e7a",
-      "name": "E61",
-      "state": "Sydney",
-      "category": "Scrubber",
-      "serial": "1133",
-      "hours": "",
-      "powerType": "Not specified",
-      "price": "4000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05430.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05431.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05432.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05433.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05434.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05435.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05436.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05437.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05438.webp"
-      ],
-      "notes": "2010 Model",
-      "dateAdded": "2026-07-29T01:09:57.114223Z"
-    },
-    {
-      "id": "m_65d4394e7a",
       "name": "E71",
       "state": "Sydney",
       "category": "Scrubber",
