@@ -822,31 +822,6 @@
     },
 
     {
-      "id": "M1",
-      "name": "M1",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "6695",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "5000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05112.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05113.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05114.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05115.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05116.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05117.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05118.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05119.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05120.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05121.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2019 Model"
-    },
-    {
       "id": "M2",
       "name": "M2",
       "state": "Sydney",
