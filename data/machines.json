@@ -803,6 +803,31 @@
     },
 
     {
+      "id": "M1",
+      "name": "M1",
+      "state": "Sydney",
+      "category": "Sweeper",
+      "serial": "6695",
+      "hours": "NA",
+      "powerType": "Not specified",
+      "price": "5000",
+      "sharepointUrl": "",
+      "images": [
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05112.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05113.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05114.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05115.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05116.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05117.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05118.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05119.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05120.webp",
+        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05121.webp"
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": "2019 Model"
+    },
+    {
       "id": "M2",
       "name": "M2",
       "state": "Sydney",
@@ -1394,39 +1419,6 @@
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04876.webp",
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04877.webp",
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04878.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": ""
-    },
-    {
-      "id": "m_seed11",
-      "name": "M6 LPG",
-      "state": "Melbourne",
-      "category": "Sweeper",
-      "serial": "0234",
-      "hours": "488.8",
-      "powerType": "LPG",
-      "price": "45,000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_1.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_2.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_3.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_4.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_5.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_6.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_7.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_8.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_9.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_10.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_11.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_12.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_13.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_14.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_15.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_16.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_17.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/m_seed11_18.webp"
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": ""
