@@ -1053,37 +1053,6 @@
       "notes": "2018 Model"
     },
     {
-      "id": "M1",
-      "name": "M1 EB",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "6696",
-      "hours": "NA",
-      "powerType": "Not specified",
-      "price": "10000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04971.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04972.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04973.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04974.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04975.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04976.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04977.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04979.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04980.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04981.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04982.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04983.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04984.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04985.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04986.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04987.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "2019 Model"
-    },
-    {
       "id": "m_seedP3",
       "name": "P3 EB",
       "state": "Queensland",
