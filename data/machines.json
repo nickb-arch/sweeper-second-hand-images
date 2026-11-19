@@ -602,7 +602,7 @@
       "state": "Sydney",
       "category": "Scrubber",
       "serial": "1097",
-      "hours": "NA",
+      "hours": "635",
       "powerType": "Not specified",
       "price": "25000",
       "sharepointUrl": "",
@@ -630,7 +630,7 @@
       "state": "Sydney",
       "category": "Scrubber",
       "serial": "1149",
-      "hours": "635",
+      "hours": "137",
       "powerType": "Not specified",
       "price": "25000",
       "sharepointUrl": "",
@@ -649,6 +649,23 @@
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "3M Safety Light"
+    },
+
+    {
+      "id": "E100",
+      "name": "E100",
+      "state": "Sydney",
+      "category": "Scrubber",
+      "serial": "0290",
+      "hours": "254",
+      "powerType": "Not specified",
+      "price": "25000",
+      "sharepointUrl": "",
+      "images": [
+
+      ],
+      "dateAdded": "2026-07-28T00:00:00.000Z",
+      "notes": ""
     },
     {
       "id": "TR",
@@ -1787,7 +1804,7 @@
       "state": "Sydney",
       "category": "Scrubber",
       "serial": "1158",
-      "hours": "NA",
+      "hours": "0",
       "powerType": "Not specified",
       "price": "25000",
       "sharepointUrl": "",
@@ -1807,7 +1824,7 @@
         "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC05231.webp"
       ],
       "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": "Overhead guard"
+      "notes": "Overhead guard, hour meter reset. Side broom Attachment"
     }
   ]
 }
