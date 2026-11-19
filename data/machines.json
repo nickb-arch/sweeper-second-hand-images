@@ -1378,37 +1378,8 @@
       "dateAdded": "2026-07-28T00:00:00.000Z",
       "notes": "Additional cost if battery required"
     },
-    {
-      "id": "m_seed10",
-      "name": "P7 Diesel",
-      "state": "Sydney",
-      "category": "Sweeper",
-      "serial": "0023",
-      "hours": "82.8",
-      "powerType": "Diesel",
-      "price": "52,000",
-      "sharepointUrl": "",
-      "images": [
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04863.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04864.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04865.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04866.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04867.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04868.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04869.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04870.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04871.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04872.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04873.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04874.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04875.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04876.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04877.webp",
-        "https://pub-8463b5905d6c43b196067d28a2e6a33f.r2.dev/DSC04878.webp"
-      ],
-      "dateAdded": "2026-07-28T00:00:00.000Z",
-      "notes": ""
-    },
+
+    
     {
       "id": "m_seed12",
       "name": "M6 LPG",
